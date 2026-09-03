@@ -39,15 +39,30 @@
   --color-fd-accent-foreground: #34d399;
   --color-fd-ring: #10b981;
 }
-/* Coinbase CDP Flat Design: Cards & Callouts */
-[data-card],
-.nd-card,
-div:has(> [role='none']) {
+/* Strip any border or background from headings */
+.group\/heading a,
+a[data-card],
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  border: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
   box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Remove section divider horizontal lines across all pages */
+hr,
+.prose hr,
+article hr {
+  display: none !important;
 }
 
 /* Flat Card Styles */
-[data-card],
 .nd-card {
   box-shadow: none !important;
   border: 1px solid var(--color-fd-border) !important;
@@ -56,18 +71,11 @@ div:has(> [role='none']) {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-[data-card] div[class*='shadow-'],
-.nd-card div[class*='shadow-'] {
-  box-shadow: none !important;
-}
-
-[data-card]:hover,
 .nd-card:hover {
   border-color: #0d793d !important;
   background-color: #f7fbf8 !important;
 }
 
-.dark [data-card]:hover,
 .dark .nd-card:hover {
   border-color: #22c55e !important;
   background-color: #071f13 !important;
@@ -86,6 +94,23 @@ div:has(> [role='none']) {
 
 /* Hide the inner floating 0.5px line since the container has a solid 4px border-left */
 div:has(> [role='none']) > [role='none'] {
+  display: none !important;
+}
+
+/* Replace Fumadocs sidebar toggle icon with Hugeicons Menu01 (3-line hamburger menu) on Desktop & Mobile */
+button[aria-label*='Sidebar'] svg.lucide-panel-left,
+button:has(> svg.lucide-panel-left) svg.lucide-panel-left,
+svg.lucide-panel-left {
+  background-color: currentColor !important;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 5L20 5'/%3E%3Cpath d='M4 12L20 12'/%3E%3Cpath d='M4 19L20 19'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 5L20 5'/%3E%3Cpath d='M4 12L20 12'/%3E%3Cpath d='M4 19L20 19'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+}
+
+button[aria-label*='Sidebar'] svg.lucide-panel-left *,
+button:has(> svg.lucide-panel-left) svg.lucide-panel-left *,
+svg.lucide-panel-left * {
   display: none !important;
 }
 html {

@@ -97,7 +97,11 @@ bun run prepare
 1. **Cú pháp MDX**:
    - Không chèn biểu thức toán học LaTeX bằng dấu `$$` hoặc `{}` tự do trong văn bản vì acorn parser của MDX sẽ xem đó là JSX expression và gây lỗi biên dịch.
    - Các công thức tính toán cần đặt bên trong code block (ví dụ: ` ```txt ... ``` `).
-2. **Iconography**:
-   - Sử dụng Hugeicons thông qua `src/lib/hugeicons-resolver.tsx`.
-   - Đặt tên icon chuẩn trong `meta.json` (ví dụ: `GraduationCap`, `Building`, `Users`, `Award`, `Shield`, `BookOpen`, `DollarSign`, `Phone`).
+2. **Iconography — QUY TẮC BẮT BUỘC: CHỈ SỬ DỤNG ICON CỦA HUGEICONS DẠNG FREE**:
+   - Dự án **chỉ được phép sử dụng icon từ gói Hugeicons miễn phí (`@hugeicons/core-free-icons` và `@hugeicons/react`)**.
+   - **Tuyệt đối không sử dụng** icon từ các thư viện khác (như Lucide, Heroicons, FontAwesome, v.v.) hoặc các icon Pro/trả phí của Hugeicons.
+   - Khi cần thêm icon trong `meta.json`, component hoặc trang MDX:
+     - Khai báo tên icon hợp lệ trong `src/lib/hugeicons-resolver.tsx` (ví dụ: `GraduationCap`, `Building`, `Users`, `Award`, `Shield`, `BookOpen`, `DollarSign`, `Phone`).
+     - Hoặc import trực tiếp từ `@hugeicons/core-free-icons` (ví dụ: `import { Menu01Icon, Alert02Icon } from '@hugeicons/core-free-icons'`).
+   - Icon nút đóng/mở sidebar trên cả Desktop và Mobile được chuyển đổi đồng bộ sang icon 3 gạch `Menu01Icon` của Hugeicons Free.
 3. **Commit Message**: Tuân thủ quy chuẩn Conventional Commits (`feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `chore:`). Lefthook và Commitlint sẽ tự động kiểm tra trước khi commit.

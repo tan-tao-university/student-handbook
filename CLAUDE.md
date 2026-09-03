@@ -30,6 +30,8 @@ bun run prepare                 # Install lefthook git hooks
 - **Package Manager**: Bun (`v1.4+`)
 - **Styling**: Tailwind CSS v4 + Fumadocs CSS variables (`@import 'fumadocs-ui/css/neutral.css'`)
 - **Icon Set**: Hugeicons Free (`@hugeicons/core-free-icons`, `@hugeicons/react`)
+  - **MANDATORY RULE**: Strictly only use free icons from Hugeicons (`@hugeicons/core-free-icons` and `@hugeicons/react`). Never use other icon sets (Lucide, Heroicons, FontAwesome) or paid Hugeicons Pro.
+  - Sidebar toggle/collapse trigger on both Desktop and Mobile is customized to the Hugeicons 3-line hamburger menu (`Menu01Icon`).
 - **Tooling**: Oxlint, Oxfmt, Knip, JSCPD, Commitlint, Lefthook
 
 ## Design & Branding System
@@ -58,7 +60,8 @@ bun run prepare                 # Install lefthook git hooks
   - 8 core folders: `hoc-vu`, `luu-tru`, `doi-song-sinh-vien`, `ren-luyen`, `quy-che-cong-tac-sv`, `tai-nguyen`, `tai-chinh`, `lien-he`.
   - Each folder contains a `meta.json` defining title, Lucide/Hugeicons icon, and page order.
 - **Icons**:
-  - Resolved via `src/lib/hugeicons-resolver.tsx` using `loader({ icon(icon) { return resolveHugeIcon(icon); } })` in `src/lib/source.ts`.
+  - All icons throughout the site (sidebar navigation, callouts, cards, mobile/desktop triggers) must strictly originate from `@hugeicons/core-free-icons`.
+  - Sidebar categories resolved via `src/lib/hugeicons-resolver.tsx` using `loader({ icon(icon) { return resolveHugeIcon(icon); } })` in `src/lib/source.ts`.
 - **MDX Safety**:
   - Avoid raw LaTeX `$$` or unescaped `{}` expressions in markdown paragraphs, which trigger Acorn JSX syntax errors in Fumadocs MDX. Use code blocks (` ```txt ... ``` `) for formulas.
 - **Git Commits**:
