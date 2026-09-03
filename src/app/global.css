@@ -39,7 +39,55 @@
   --color-fd-accent-foreground: #34d399;
   --color-fd-ring: #10b981;
 }
+/* Coinbase CDP Flat Design: Cards & Callouts */
+[data-card],
+.nd-card,
+div:has(> [role='none']) {
+  box-shadow: none !important;
+}
 
+/* Flat Card Styles */
+[data-card],
+.nd-card {
+  box-shadow: none !important;
+  border: 1px solid var(--color-fd-border) !important;
+  border-radius: 0.75rem !important;
+  background-color: var(--color-fd-card) !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+[data-card] div[class*='shadow-'],
+.nd-card div[class*='shadow-'] {
+  box-shadow: none !important;
+}
+
+[data-card]:hover,
+.nd-card:hover {
+  border-color: #0d793d !important;
+  background-color: #f7fbf8 !important;
+}
+
+.dark [data-card]:hover,
+.dark .nd-card:hover {
+  border-color: #22c55e !important;
+  background-color: #071f13 !important;
+}
+
+/* Flat Callout Styles matching CDP & Image #1 */
+div:has(> [role='none']) {
+  box-shadow: none !important;
+  border-radius: 0.75rem !important;
+  background-color: var(--color-fd-card) !important;
+  border: 1px solid var(--color-fd-border) !important;
+  border-left-width: 4px !important;
+  border-left-color: var(--callout-color, var(--color-fd-primary)) !important;
+  padding: 1rem 1.25rem !important;
+}
+
+/* Hide the inner floating 0.5px line since the container has a solid 4px border-left */
+div:has(> [role='none']) > [role='none'] {
+  display: none !important;
+}
 html {
   scrollbar-gutter: stable;
 }
