@@ -39,9 +39,8 @@
   --color-fd-accent-foreground: #34d399;
   --color-fd-ring: #10b981;
 }
-/* Strip any border or background from headings */
+/* Strip border and background from headings ONLY (never cards) */
 .group\/heading a,
-a[data-card],
 h1 a,
 h2 a,
 h3 a,
@@ -55,6 +54,22 @@ h6 a {
   padding: 0 !important;
 }
 
+/* Section spacing: ensure sections never stick together */
+.prose h2,
+article h2,
+h2 {
+  margin-top: 2.75rem !important;
+  margin-bottom: 1rem !important;
+  padding-top: 0.5rem !important;
+}
+
+.prose h3,
+article h3,
+h3 {
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
 /* Remove section divider horizontal lines across all pages */
 hr,
 .prose hr,
@@ -63,24 +78,32 @@ article hr {
 }
 
 /* Flat Card Styles */
+[data-card]:not(.group\/heading *):not(h1 *):not(h2 *):not(h3 *):not(h4 *),
 .nd-card {
   box-shadow: none !important;
   border: 1px solid var(--color-fd-border) !important;
   border-radius: 0.75rem !important;
   background-color: var(--color-fd-card) !important;
+  padding: 1.25rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
+[data-card]:not(.group\/heading *):not(h1 *):not(h2 *):not(h3 *):not(h4 *):hover,
 .nd-card:hover {
   border-color: #0d793d !important;
   background-color: #f7fbf8 !important;
+  transform: translateY(-2px) !important;
 }
 
+.dark [data-card]:not(.group\/heading *):not(h1 *):not(h2 *):not(h3 *):not(h4 *):hover,
 .dark .nd-card:hover {
   border-color: #22c55e !important;
-  background-color: #071f13 !important;
+  background-color: #051d11 !important;
+  transform: translateY(-2px) !important;
 }
-
 /* Flat Callout Styles matching CDP & Image #1 */
 div:has(> [role='none']) {
   box-shadow: none !important;
