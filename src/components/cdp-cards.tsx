@@ -105,37 +105,37 @@ interface CalloutProps {
 
 const calloutConfig = {
   warn: {
-    borderColor: 'border-l-amber-500',
+    barBgColor: 'bg-amber-500',
     iconColor: 'text-amber-500 dark:text-amber-400',
     titleColor: 'text-amber-950 dark:text-amber-200',
     icon: Alert02Icon,
   },
   warning: {
-    borderColor: 'border-l-amber-500',
+    barBgColor: 'bg-amber-500',
     iconColor: 'text-amber-500 dark:text-amber-400',
     titleColor: 'text-amber-950 dark:text-amber-200',
     icon: Alert02Icon,
   },
   error: {
-    borderColor: 'border-l-red-500',
+    barBgColor: 'bg-red-500',
     iconColor: 'text-red-500 dark:text-red-400',
     titleColor: 'text-red-950 dark:text-red-200',
     icon: CancelCircleIcon,
   },
   success: {
-    borderColor: 'border-l-emerald-500',
+    barBgColor: 'bg-emerald-500',
     iconColor: 'text-emerald-500 dark:text-emerald-400',
     titleColor: 'text-emerald-950 dark:text-emerald-200',
     icon: CheckmarkCircle02Icon,
   },
   info: {
-    borderColor: 'border-l-[#0d793d] dark:border-l-[#22c55e]',
+    barBgColor: 'bg-[#0d793d] dark:bg-[#22c55e]',
     iconColor: 'text-[#0d793d] dark:text-[#22c55e]',
     titleColor: 'text-emerald-950 dark:text-emerald-200',
     icon: InformationCircleIcon,
   },
   tip: {
-    borderColor: 'border-l-[#0d793d] dark:border-l-[#22c55e]',
+    barBgColor: 'bg-[#0d793d] dark:bg-[#22c55e]',
     iconColor: 'text-[#0d793d] dark:text-[#22c55e]',
     titleColor: 'text-emerald-950 dark:text-emerald-200',
     icon: InformationCircleIcon,
@@ -148,8 +148,9 @@ export function Callout({ type = 'info', title, icon, children, className = '' }
 
   return (
     <div
-      className={`my-5 rounded-xl border border-zinc-200 dark:border-zinc-800 border-l-[3.5px] ${config.borderColor} bg-white dark:bg-black p-4 md:p-5 shadow-none transition-colors ${className}`}
+      className={`my-5 relative overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black p-4 md:p-5 pl-5 md:pl-6 shadow-none transition-colors ${className}`}
     >
+      <div className={`absolute left-0 top-0 bottom-0 w-1 ${config.barBgColor}`} />
       {title && (
         <div className="flex items-center gap-2 mb-2">
           {icon ?? (
@@ -162,7 +163,7 @@ export function Callout({ type = 'info', title, icon, children, className = '' }
           </span>
         </div>
       )}
-      <div className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed prose-no-margin [&_p]:my-1.5 [&_ul]:my-1.5 [&_ol]:my-1.5 [&_li]:my-0.5">
+      <div className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed prose-no-margin [&_p]:my-1.5 [&_ul]:my-1.5 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:my-1.5 [&_ol]:list-decimal [&_ol]:pl-5 [&_li]:my-1.5">
         {children}
       </div>
     </div>

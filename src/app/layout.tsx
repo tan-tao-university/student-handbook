@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: 'Sổ tay Sinh viên TTU - Đại học Tân Tạo',
     template: '%s | Sổ tay Sinh viên TTU',
   },
-  description: 'Cẩm nang toàn diện dành cho sinh viên Trường Đại học Tân Tạo (Tan Tao University)',
+  description: 'Cẩm nang toàn diện dành cho sinh viên Trường Đại học Tân Tạo',
   icons: {
     icon: '/logo-ttu.png',
     shortcut: '/logo-ttu.png',
