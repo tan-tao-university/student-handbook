@@ -26,13 +26,6 @@ export function baseOptions(): BaseLayoutProps {
       ),
       url: '/',
     },
-    links: [
-      {
-        type: 'main',
-        text: 'Cổng thông tin TTU',
-        url: 'https://ttu.edu.vn',
-        external: true,
-      },
-    ],
+    links: [],
   };
 }
