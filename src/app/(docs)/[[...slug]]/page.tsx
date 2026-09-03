@@ -35,11 +35,17 @@ export async function generateMetadata(props: PageProps<'/[[...slug]]'>): Promis
   const params = await props.params;
   const page = source.getPage(params.slug);
   if (!page) notFound();
+  const isRoot = !params.slug || params.slug.length === 0;
+  const title = isRoot ? { absolute: 'Sổ tay Sinh viên TTU - Đại học Tân Tạo' } : page.data.title;
 
   return {
-    title: page.data.title,
+    title,
     description: page.data.description,
     openGraph: {
+      title: isRoot
+        ? 'Sổ tay Sinh viên TTU - Đại học Tân Tạo'
+        : `${page.data.title} | Sổ tay Sinh viên TTU`,
+      description: page.data.description,
       images: getPageImageUrl(page).url,
     },
   };
