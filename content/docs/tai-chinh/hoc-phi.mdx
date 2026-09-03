@@ -3,9 +3,6 @@ title: Quy định Học phí & Thanh toán
 description: Chính sách học phí cố định, thời hạn đóng học phí từng học kỳ và hướng dẫn thủ tục chuyển khoản ngân hàng tại TTU.
 ---
 
-import { Callout } from 'fumadocs-ui/components/callout';
-import { Steps, Step } from 'fumadocs-ui/components/steps';
-
 ## 1. Chính sách Học phí Cố định
 
 Tại Đại học Tân Tạo, chính sách học phí được công khai minh bạch ngay từ kỳ tuyển sinh đầu khóa:
@@ -13,44 +10,32 @@ Tại Đại học Tân Tạo, chính sách học phí được công khai minh 
 - **Cam kết không tăng học phí**: Mức học phí của sinh viên khóa mới được quy định trong Đề án tuyển sinh hằng năm và **được giữ nguyên không đổi trong suốt toàn bộ khóa học chuẩn** của ngành đào tạo đó.
 - Sinh viên có thể tra cứu chi tiết mức học phí theo ngành trên website chính thức [tuyensinh.ttu.edu.vn](https://tuyensinh.ttu.edu.vn/).
 
----
-
 ## 2. Thời hạn Nộp Học phí
 
 - **Thông báo học phí**: Đầu mỗi học kỳ, Phòng Tài chính - Kế toán phối hợp cùng Phòng Quản lý Đào tạo ban hành thông báo học phí chi tiết căn cứ trên số tín chỉ sinh viên đã đăng ký.
 - **Thời hạn hoàn thành**: Sinh viên phải hoàn tất nộp học phí trong thời hạn được quy định trong thông báo (thường diễn ra trong 2 tuần đầu của học kỳ).
 
 <Callout type="error" title="Hậu quả của việc nợ học phí">
-  Sinh viên chưa hoàn thành học phí đúng hạn sẽ: 1. **Không được duyệt đăng ký học phần** chính
-  thức. 2. **Bị xóa tên khỏi danh sách dự thi** kết thúc học phần của kỳ học đó. 3. **Không được cấp
-  các giấy tờ xác nhận**, bảng điểm tạm thời hoặc xét cấp học bổng. 4. Không được xét tốt nghiệp ra
-  trường.
-</Callout>
 
----
+Sinh viên chưa hoàn thành học phí đúng hạn sẽ chịu các chế tài học vụ:
+
+- **Không được duyệt đăng ký học phần** chính thức của học kỳ.
+- **Bị xóa tên khỏi danh sách dự thi** kết thúc học phần của kỳ học đó.
+- **Không được cấp các giấy tờ xác nhận**, bảng điểm tạm thời hoặc xét duyệt học bổng.
+- **Không đủ điều kiện xét tốt nghiệp** ra trường.
+
+</Callout>
 
 ## 3. Hướng dẫn Phương thức Thanh toán
 
-Sinh viên có thể nộp học phí qua hai hình thức:
+Sinh viên và phụ huynh có thể lựa chọn một trong hai phương thức thanh toán học phí thuận tiện dưới đây:
 
 ### Hình thức 1: Chuyển khoản Ngân hàng (Khuyến khích)
 
-<Steps>
-  <Step>
-    ### Thông tin Tài khoản thụ hưởng - **Tên đơn vị thụ hưởng**: Trường Đại học Tân Tạo - **Số tài
-    khoản**: Theo thông báo học phí chính thức từng năm của Phòng Tài chính - **Ngân hàng**:
-    Vietcombank / Vietinbank / BIDV chi nhánh chỉ định
-  </Step>
-  <Step>
-    ### Cú pháp Chuyển khoản Bắt buộc `[Mã số sinh viên] - [Họ và tên sinh viên] - [Nộp học phí
-    HK... NH...]` *Ví dụ:* `23010012 - Nguyen Van A - Nop hoc phi HK1 NH 2023-2024`
-  </Step>
-  <Step>
-    ### Lưu giữ biên lai Lưu lại ảnh chụp màn hình chuyển khoản thành công hoặc giấy nộp tiền ngân
-    hàng để đối chiếu khi cần thiết.
-  </Step>
-</Steps>
+Sinh viên thực hiện chuyển khoản vào tài khoản chính thức của Trường Đại học Tân Tạo tại **Ngân hàng TMCP Quốc Dân (NCB)** (hỗ trợ bấm nút sao chép nhanh từng thông tin):
 
-### Hình thức 2: Thanh toán Trực tiếp
+<BankTransferCard />
 
-Sinh viên hoặc phụ huynh có thể nộp tiền mặt trực tiếp tại quầy giao dịch **Phòng Tài chính - Kế toán**, Tòa nhà Điều hành Đại học Tân Tạo trong giờ hành chính.
+### Hình thức 2: Thanh toán Trực tiếp tại Trường
+
+<DirectPaymentCard />
