@@ -13,9 +13,13 @@ export default async function Page(props: PageProps<'/[[...slug]]'>) {
   const MDX = page.data.body;
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
-      <div className="border-b border-zinc-200 dark:border-zinc-800 pb-5 mb-6">
-        <DocsTitle>{page.data.title}</DocsTitle>
-        <DocsDescription className="mb-0 mt-2">{page.data.description}</DocsDescription>
+      <div className="border-b border-zinc-200 dark:border-zinc-800 pb-3.5 mb-4">
+        <DocsTitle className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+          {page.data.title}
+        </DocsTitle>
+        <DocsDescription className="mb-0 mt-1.5 text-sm md:text-base text-zinc-600 dark:text-zinc-400">
+          {page.data.description}
+        </DocsDescription>
       </div>
       <DocsBody>
         <MDX

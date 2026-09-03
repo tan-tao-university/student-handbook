@@ -6,7 +6,9 @@ import {
   InformationCircleIcon,
   CancelCircleIcon,
   CheckmarkCircle02Icon,
+  ArrowUpRight01Icon,
 } from '@hugeicons/core-free-icons';
+import { resolveHugeIcon } from '@/lib/hugeicons-resolver';
 
 interface CardsProps extends ComponentProps<'div'> {
   children: ReactNode;
@@ -15,7 +17,7 @@ interface CardsProps extends ComponentProps<'div'> {
 
 export function Cards({ children, className = '', ...props }: CardsProps) {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose ${className}`} {...props}>
+    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose ${className}`} {...props}>
       {children}
     </div>
   );
@@ -39,37 +41,35 @@ export function Card({
   className = '',
   ...props
 }: CardProps) {
+  const renderedIcon = typeof icon === 'string' ? resolveHugeIcon(icon) : icon;
+
   const content = (
     <div
       className={`group relative flex flex-col justify-between rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black p-5 transition-all duration-200 shadow-none ${
         href
-          ? 'hover:border-[#0d793d] dark:hover:border-[#22c55e] hover:bg-emerald-50/20 dark:hover:bg-emerald-950/10 cursor-pointer'
+          ? 'hover:border-[#0d793d] dark:hover:border-[#22c55e] hover:bg-emerald-50/20 dark:hover:bg-emerald-950/10 hover:-translate-y-0.5 cursor-pointer'
           : ''
       } ${className}`}
       {...props}
     >
       <div>
-        {icon && (
-          <div className="mb-3 w-fit text-[#0d793d] dark:text-[#22c55e] [&_svg]:size-5">{icon}</div>
-        )}
-        <div className="flex items-center justify-between gap-2">
-          <h3 className="font-semibold text-base text-zinc-900 dark:text-zinc-100 my-0 tracking-tight">
-            {title}
-          </h3>
+        <div className="flex items-center justify-between gap-2 mb-3.5">
+          {renderedIcon ? (
+            <div className="flex items-center justify-center size-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-[#0d793d] dark:text-[#22c55e] border border-emerald-100 dark:border-emerald-900/40 [&_svg]:size-5 shadow-none transition-colors group-hover:bg-[#0d793d] group-hover:text-white dark:group-hover:bg-[#22c55e] dark:group-hover:text-black">
+              {renderedIcon}
+            </div>
+          ) : (
+            <div />
+          )}
           {href && (
-            <span className="text-zinc-400 group-hover:text-[#0d793d] dark:group-hover:text-[#22c55e] group-hover:translate-x-0.5 transition-all duration-200">
-              <svg
-                className="size-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
+            <span className="text-zinc-400 dark:text-zinc-500 group-hover:text-[#0d793d] dark:group-hover:text-[#22c55e] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 shrink-0">
+              <HugeiconsIcon icon={ArrowUpRight01Icon} size={20} strokeWidth={2} />
             </span>
           )}
         </div>
+        <h3 className="font-semibold text-base text-zinc-900 dark:text-zinc-100 my-0 tracking-tight">
+          {title}
+        </h3>
         {description && (
           <p className="mt-2 mb-0 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal">
             {description}

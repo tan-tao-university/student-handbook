@@ -54,22 +54,43 @@ h6 a {
   padding: 0 !important;
 }
 
-/* Section spacing: ensure sections never stick together */
+/* Document layout: prevent page from sinking down too deep */
+#nd-docs-layout > div,
+[data-container],
+article {
+  padding-top: 1.25rem !important;
+}
+
+/* First content item right below header divider */
+.prose > :first-child,
+.prose > h2:first-of-type,
+h2:first-of-type {
+  margin-top: 0.875rem !important;
+  padding-top: 0 !important;
+}
+
+/* Section spacing: balanced vertical rhythm */
 .prose h2,
 article h2,
 h2 {
-  margin-top: 2.75rem !important;
-  margin-bottom: 1rem !important;
-  padding-top: 0.5rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.875rem !important;
+  padding-top: 0 !important;
 }
 
 .prose h3,
 article h3,
 h3 {
-  margin-top: 2rem !important;
-  margin-bottom: 0.75rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.625rem !important;
 }
 
+.prose p,
+article p {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.875rem !important;
+  line-height: 1.7 !important;
+}
 /* Remove section divider horizontal lines across all pages */
 hr,
 .prose hr,
