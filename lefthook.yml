@@ -1,0 +1,18 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: format-check
+      glob: '*.{js,jsx,ts,tsx,json,css,md,mdx}'
+      run: bun x oxfmt --check {staged_files}
+    - name: lint
+      glob: '*.{js,jsx,ts,tsx}'
+      run: bun x oxlint {staged_files}
+    - name: typecheck
+      run: bun run types:check
+    - name: duplication
+      run: bun run check:duplication
+
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: bun x commitlint --edit {1}

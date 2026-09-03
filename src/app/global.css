@@ -2,6 +2,44 @@
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
+:root {
+  --color-fd-background: #ffffff;
+  --color-fd-foreground: #09090b;
+  --color-fd-muted: #f4f4f5;
+  --color-fd-muted-foreground: #52525b;
+  --color-fd-card: #ffffff;
+  --color-fd-card-foreground: #09090b;
+  --color-fd-popover: #ffffff;
+  --color-fd-popover-foreground: #09090b;
+  --color-fd-border: #e4e4e7;
+  --color-fd-primary: #0d793d; /* Exact TTU Logo Green */
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-secondary: #f4f4f5;
+  --color-fd-secondary-foreground: #18181b;
+  --color-fd-accent: #eef8f2;
+  --color-fd-accent-foreground: #0d793d;
+  --color-fd-ring: #0d793d;
+}
+
+.dark {
+  --color-fd-background: #000000; /* Pure black */
+  --color-fd-foreground: #f4f4f5;
+  --color-fd-muted: #111113;
+  --color-fd-muted-foreground: #a1a1aa;
+  --color-fd-card: #09090b; /* Near black */
+  --color-fd-card-foreground: #f4f4f5;
+  --color-fd-popover: #09090b;
+  --color-fd-popover-foreground: #f4f4f5;
+  --color-fd-border: #27272a;
+  --color-fd-primary: #10b981; /* Vibrant emerald */
+  --color-fd-primary-foreground: #000000;
+  --color-fd-secondary: #18181b;
+  --color-fd-secondary-foreground: #f4f4f5;
+  --color-fd-accent: #062b1a;
+  --color-fd-accent-foreground: #34d399;
+  --color-fd-ring: #10b981;
+}
+
 html {
   scrollbar-gutter: stable;
 }
