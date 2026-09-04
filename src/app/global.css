@@ -64,11 +64,20 @@ article {
   padding-top: 1.25rem !important;
 }
 
-/* Collapsing the sidebar renders a floating re-expand toggle fixed over the
-   page's top-left corner; give the article enough clearance so its content
-   doesn't render underneath that floating control. */
-#nd-docs-layout[data-sidebar-collapsed='true'] article {
-  padding-top: 6rem !important;
+/* Collapsed sidebar: reserve rail width in the grid (instead of the 0px
+   column Fumadocs defaults to) so the icon rail has room without covering
+   page content, and hide Fumadocs' own floating re-expand toggle in favor
+   of the expand control built into SidebarIconRail. Only the grid column
+   is touched -- --fd-sidebar-width stays untouched so the (still hidden)
+   native aside keeps translating fully off-screen at its real width,
+   rather than being squeezed to rail width and having its title text
+   overflow back into view. */
+#nd-docs-layout[data-sidebar-collapsed='true'] {
+  --fd-sidebar-col: 4.5rem !important;
+}
+
+[data-sidebar-panel] {
+  display: none !important;
 }
 
 [data-ai-chat-panel] {
