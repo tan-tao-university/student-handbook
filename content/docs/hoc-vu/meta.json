@@ -1,5 +1,12 @@
 {
   "title": "Học vụ & Đào tạo",
   "icon": "GraduationCap",
-  "pages": ["dang-ky-mon-hoc", "rut-mon-hoc", "danh-gia-va-diem-so", "quy-che-hoc-tap"]
+  "pages": [
+    "dang-ky-mon-hoc",
+    "rut-mon-hoc",
+    "danh-gia-va-diem-so",
+    "quy-che-hoc-tap",
+    "chuan-ngoai-ngu",
+    "khoa-luan-tot-nghiep"
+  ]
 }

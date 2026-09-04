@@ -5,6 +5,7 @@ import { Steps, Step } from 'fumadocs-ui/components/steps';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 import { Card, Cards, Callout } from './cdp-cards';
 import { BankTransferCard, DirectPaymentCard } from './payment-cards';
+import { RegistrationSteps } from './registration-steps';
 export function getMDXComponents(components?: MDXComponents) {
   return {
     ...defaultMdxComponents,
@@ -13,6 +14,7 @@ export function getMDXComponents(components?: MDXComponents) {
     Callout,
     BankTransferCard,
     DirectPaymentCard,
+    RegistrationSteps,
     Tabs,
     Tab,
     Steps,

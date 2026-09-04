@@ -42,6 +42,7 @@ export async function generateMetadata(props: PageProps<'/[[...slug]]'>): Promis
   if (!page) notFound();
   const isRoot = !params.slug || params.slug.length === 0;
   const title = isRoot ? { absolute: 'Sổ tay Sinh viên TTU - Đại học Tân Tạo' } : page.data.title;
+  const ogImage = isRoot ? '/og-image.png' : getPageImageUrl(page).url;
 
   return {
     title,
@@ -51,7 +52,15 @@ export async function generateMetadata(props: PageProps<'/[[...slug]]'>): Promis
         ? 'Sổ tay Sinh viên TTU - Đại học Tân Tạo'
         : `${page.data.title} | Sổ tay Sinh viên TTU`,
       description: page.data.description,
-      images: getPageImageUrl(page).url,
+      images: [ogImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isRoot
+        ? 'Sổ tay Sinh viên TTU - Đại học Tân Tạo'
+        : `${page.data.title} | Sổ tay Sinh viên TTU`,
+      description: page.data.description,
+      images: [ogImage],
     },
   };
 }
