@@ -19,8 +19,7 @@
 
 **Sổ tay Sinh viên TTU (Student Handbook)** là nền tảng tài liệu số hóa chính thức của Trường Đại học Tân Tạo (Tan Tao University), được xây dựng trên nền tảng Next.js 16 và Fumadocs. Dự án cung cấp cho sinh viên, giảng viên và cán bộ quản lý công cụ tra cứu thông tin học vụ, ký túc xá, rèn luyện kỹ năng mềm, chính sách học bổng và các thủ tục hành chính trực quan, nhanh chóng và chuẩn xác.
 
-Toàn bộ nội dung được số hóa trực tiếp từ tài liệu **Sổ tay Sinh viên Năm học 2023–2024** và hệ thống quy chế đào tạo, công tác sinh viên hiện hành của Nhà trường.
-
+Toàn bộ nội dung được số hóa trực tiếp từ tài liệu **Sổ tay Sinh viên Năm học 2026–2027** (`so_tay_sinh_vien_26_27.docx`) và hệ thống quy chế đào tạo, công tác sinh viên mới nhất của Nhà trường.
 ---
 
 ## 🚀 Cấu trúc Sổ tay & Các Chuyên mục Cốt lõi
@@ -56,47 +55,50 @@ Toàn bộ nội dung được số hóa trực tiếp từ tài liệu **Sổ t
 
 ### 1. 🎓 Học tập & Đào tạo (`/hoc-vu/`)
 
-- **Đăng ký môn học**: Kế hoạch học tập (KHHT), hạn mức tín chỉ (10–21 TC/học kỳ chính, 8–15 TC diện cảnh báo, tối đa 12 TC học kỳ phụ), thủ tục học lại và cải thiện điểm.
-- **Rút bớt học phần**: Quy định hạn chót trong 01 tuần đầu học kỳ, điều kiện rút môn và trạng thái điểm W.
-- **Đánh giá & Điểm số**: Thang điểm chữ chuẩn Hoa Kỳ (A+ đến F), trọng số điểm thành phần (chuyên cần 10%, giữa kỳ 20–40%, cuối kỳ 50–70%), công thức tính GPA thang 4 và quy trình phúc khảo điểm.
-- **Liêm chính học thuật & Quản chế**: Tỷ lệ tham dự lớp tối thiểu 80%, chính sách chống đạo văn (tài liệu Internet ≤ 25%), quy chế xử lý gian lận thi cử và quy trình quản chế học tập khi GPA < 2.0.
+- **Đăng ký môn học**: Khung giờ tiết học chuẩn (50 phút/tiết), các bước đăng ký trực tuyến trên [my.ttu.edu.vn](https://my.ttu.edu.vn), hạn chót trước 15 ngày, quy định học vượt và chương trình song bằng/song ngành.
+- **Rút bớt học phần**: Hạn chót nghiêm ngặt trong **01 tuần đầu tiên** của học kỳ, quy định tài chính từ tuần thứ 2 không giải quyết rút môn/học phí.
+- **Đánh giá & Điểm số**: Thang điểm 10 quy đổi thang chữ và thang 4.0, điều kiện đạt môn (từ điểm D trở lên), cách tính GPA, xếp hạng tốt nghiệp và danh hiệu danh giá **Latin Honors** (Summa cum laude, Magna cum laude, Cum laude).
+- **Quy chế học tập & Liêm chính**: Quy định chuyên cần $\ge 80\%$, xử lý gian lận thi cử theo 4 mức độ, ngưỡng cảnh báo học vụ theo từng năm học và các điều kiện buộc thôi học.
+- **Chuẩn Ngoại ngữ**: Phân loại hệ chương trình, chuẩn tiếng Anh đầu ra theo từng Khoa và bảng so sánh quy đổi tương đương giữa TOEFL iBT, IELTS, TOEIC và Cambridge English Certificate.
+- **Khóa luận & Đồ án tốt nghiệp**: Tiêu chuẩn đăng ký (GPA $\ge 3.00$ hoặc $\ge 2.80$ có NCKH), quy cách 30–80 trang, cơ cấu chấm điểm GV hướng dẫn (10đ) và Hội đồng (10đ).
 
 ### 2. 🏢 Lưu trú & Ký túc xá (`/luu-tru/`)
 
-- **Tổng quan KTX**: Quy định lưu trú bắt buộc năm thứ nhất, cơ sở vật chất phòng khép kín 6 người, khung giờ sinh hoạt (5h00 – 22h00), giờ tiếp khách (7h00 – 22h00) và tuyến xe buýt TTU.
-- **Nhà ăn & Dịch vụ**: Tiêu chuẩn an toàn thực phẩm, thực đơn ăn kiêng, trạm y tế và mạng Internet KTX.
-- **Nội quy & Khung kỷ luật**: Danh mục vật dụng cấm (bếp điện, bàn ủi, chất dễ cháy, thuốc lá, rượu bia, cờ bạc), bảng chế tài vi phạm theo 4 cấp độ (L1: Nhắc nhở → L4: Buộc thôi học/Hội đồng kỷ luật).
+- **Tổng quan KTX**: Quy định lưu trú bắt buộc năm nhất, cơ sở vật chất phòng ở khép kín, giờ mở cửa cổng (5h00 – 22h00), giờ tiếp khách (7h00 – 20h00 / 8h00 tối), xe buýt nội bộ và các tuyến xe buýt công cộng (81, 71, 626, 627).
+- **Nhà ăn & Dịch vụ**: Chế độ ăn uống, hotline y tế học đường & cấp cứu BV ĐH Y Tân Tạo 24/7 (`0704.911.115`), mạng Internet KTX miễn phí.
+- **Nội quy & Khung kỷ luật**: Khung xử lý kỷ luật lũy tiến các hành vi vi phạm (đỗ xe sai 3 lần cấm xe, nấu nướng, cờ bạc, tàng trữ ma túy buộc thôi học).
 
 ### 3. 👥 Đời sống Sinh viên (`/doi-song-sinh-vien/`)
 
-- **Hoạt động & Câu lạc bộ**: Hội Sinh viên TTU, hệ thống các CLB học thuật (Y khoa, Tiếng Anh, Kinh doanh, CNSH) và sở thích (Âm nhạc, Thể thao, Tình nguyện).
-- **Hỗ trợ Sinh viên**: Trạm y tế trường học, tư vấn tâm lý học đường, an ninh 24/7 và thẻ sinh viên đa năng.
-- **Quy tắc Ứng xử**: Chuẩn mực giao tiếp với giảng viên, tác phong giảng đường - phòng lab, ứng xử văn minh trên không gian mạng xã hội.
+- **Hoạt động & Câu lạc bộ**: Hệ thống CLB học thuật, văn hóa nghệ thuật, thể thao và tình nguyện trực thuộc Phòng CTSV quản lý.
+- **Hỗ trợ Sinh viên**: Kênh hỗ trợ đời sống, tư vấn tâm lý học đường, chính sách hỗ trợ vay vốn không tính lãi suất Quỹ ITA.
+- **Quy tắc Ứng xử**: 10 quy tắc văn hóa ứng xử của sinh viên TTU, quy định đồng phục polo lịch sự và quy định đeo thẻ sinh viên bắt buộc.
 
 ### 4. 🏅 Đánh giá Rèn luyện & Kỹ năng mềm (`/ren-luyen/`)
 
-- **Điểm rèn luyện (ĐRL)**: Khung đánh giá 100 điểm với 5 tiêu chí chính, phân loại xếp loại (Xuất sắc, Tốt, Khá, Trung bình, Yếu, Kém) và mức trần khi bị kỷ luật.
-- **Tín chỉ Kỹ năng mềm (TCKNM)**: Quy đổi 1 tín chỉ = 30 giờ hoạt động thực tế; điều kiện tốt nghiệp bắt buộc: **4 tín chỉ (120 giờ)** cho khối Kinh tế/Ngôn ngữ/Kỹ thuật/CNSH và **2 tín chỉ (60 giờ)** cho Khoa Y.
+- **Điểm rèn luyện (ĐRL)**: Đánh giá thang điểm 100 theo 5 tiêu chí chính, xếp loại, các trường hợp ưu tiên (khuyết tật, mồ côi) và bảo lưu khi nghỉ tạm thời.
+- **Tín chỉ Kỹ năng mềm (TCKNM)**: 1 TC = 30 giờ; điều kiện tốt nghiệp bắt buộc: **4 tín chỉ (120 giờ)** cho các khối ngành và **2 tín chỉ (60 giờ)** cho Khoa Y, Điều dưỡng & KTXNYH; chế độ điểm cộng khuyến khích từ 1 đến 5 điểm; khiếu nại trong 15 ngày.
 
 ### 5. ⚖️ Quy chế Công tác Sinh viên (`/quy-che-cong-tac-sv/`)
 
-- **Quyền & Nhiệm vụ**: Quyền lợi học tập, nghiên cứu khoa học, sử dụng cơ sở vật chất và nghĩa vụ công dân của người học.
-- **Khen thưởng & Kỷ luật**: Tiêu chuẩn danh hiệu Sinh viên Xuất sắc / Giỏi; 4 hình thức kỷ luật (Khiển trách, Cảnh cáo, Đình chỉ học tập, Buộc thôi học) và thời hạn chấm dứt hiệu lực kỷ luật.
+- **Quyền & Nhiệm vụ**: Nhiệm vụ học tập, rèn luyện, đóng học phí, BHYT đúng hạn và thực hiện cam kết học bổng.
+- **Khen thưởng & Kỷ luật**: Danh hiệu cá nhân (Khá, Giỏi, Xuất sắc), danh hiệu tập thể (Lớp Tiên tiến, Lớp Xuất sắc); bảng khung xử lý kỷ luật 27 hành vi vi phạm; quy trình 5 bước; thời hạn chấm dứt hiệu lực kỷ luật: **03 tháng** (Khiển trách) và **06 tháng** (Cảnh cáo).
 
-### 6. 📚 Thư viện & CNTT (`/tai-nguyen/`)
+### 6. 📚 Thư viện & Tài nguyên số (`/tai-nguyen/`)
 
-- **Thư viện TTU**: Giờ mở cửa phòng đọc (8h00 – 20h00), cổng tra cứu trực tuyến OPAC (`http://lib.ttu.edu.vn`), quy định mượn trả tài liệu và phòng tự học nhóm.
-- **Email & Mạng Internet**: Cấp tài khoản email chính thức `@student.ttu.edu.vn`, quy tắc an toàn thông tin và chính sách sử dụng WiFi trường học.
+- **Thư viện TTU**: Giờ mở cửa 8h00 – 17h00 Thứ 2 – Thứ 6, bộ sưu tập gần 17.000 cuốn sách in (cập nhật 5/2026), CSDL ProQuest, học liệu mở quốc tế, 9 điều nội quy và hệ thống Koha.
+- **Email & Mạng Internet**: Cấp tài khoản `@student.ttu.edu.vn`, quy tắc an toàn thông tin mạng và thông tin Ban CNTT.
+- **Nghiên cứu Khoa học & Đổi mới sáng tạo**: Tài trợ đề tài NCKH sinh viên tối đa 30.000.000 VNĐ/đề tài (4 giai đoạn), Hội thảo NCKH thường niên, Ngày hội STEAM Day, Tạp chí TJS 2026 và kết nối khởi nghiệp tỉnh Tây Ninh.
 
 ### 7. 💵 Tài chính & Học bổng (`/tai-chinh/`)
 
-- **Học phí**: Chính sách cam kết học phí cố định toàn khóa, phương thức chuyển khoản ngân hàng và chế tài nợ học phí.
-- **Học bổng Quỹ ITA**: Chi tiết điều kiện xét duyệt Học bổng Tài năng ITA và Học bổng Vượt khó ITASS (mức hỗ trợ 50% – 100% học phí dựa trên GPA, ĐRL và số giờ TCKNM).
+- **Học phí**: Chính sách cam kết học phí cố định, hướng dẫn kiểm tra học phí trên MyTTU, thông tin Kế toán trưởng và tài khoản thanh toán NCB.
+- **Học bổng Quỹ ITA**: Học bổng Tài năng ITA và Vượt khó ITASS (mức 100%, 75%, 50%), Hỗ trợ vay 0% lãi suất, điều kiện duy trì học bổng từng kỳ ($\ge 80\%$ hoạt động truyền thông), nghĩa vụ phục vụ quê hương ITASS và quy trình xét cấp 9 bước.
 
 ### 8. 📞 Hỗ trợ & Danh bạ Liên hệ (`/lien-he/`)
 
-- **Thủ tục Một cửa**: Quy trình xin cấp giấy xác nhận sinh viên, hoãn nghĩa vụ quân sự, bảng điểm tạm thời và bảo lưu.
-- **Danh bạ Phòng Ban**: Địa chỉ, số điện thoại hotline và email của các Phòng, Ban, Khoa chuyên môn thuộc Trường Đại học Tân Tạo.
+- **Thủ tục Một cửa & FAQ**: Quy trình cấp giấy xác nhận SV, tạm hoãn NVQS, bảng điểm, phúc khảo thi (5 ngày), hồ sơ học bổng Quỹ ITA.
+- **Danh bạ Toàn diện**: Thông tin liên hệ Ban Giám hiệu, 8 phòng ban chức năng, Ban Thư viện, Ban CNTT, trường TTS, các trung tâm và Ban Chủ nhiệm & Thư ký của cả 7 Khoa chuyên môn.
 
 ---
 
@@ -137,12 +139,15 @@ bun install
 # 3. Kích hoạt Git hooks (Lefthook)
 bun run prepare
 
-# 4. Khởi chạy máy chủ phát triển
+# 4. Khởi chạy môi trường phát triển
 bun run dev
+
+# 5. Chạy môi trường Production bằng PM2 (port mặc định 65200)
+bun run build
+bun run pm2:start
 ```
 
-Truy cập ứng dụng tại địa chỉ: `http://localhost:3000`.
-
+Truy cập ứng dụng tại địa chỉ: `http://localhost:3000` (dev) hoặc `http://localhost:65200` (production).
 ---
 
 ## 🧪 Kiểm tra Chất lượng Mã nguồn (Quality Assurance)
