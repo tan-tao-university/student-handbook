@@ -158,6 +158,59 @@ article {
   }
 }
 
+@property --ai-trigger-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+[data-ai-chat-trigger],
+[data-ai-chat-trigger]::after {
+  background: conic-gradient(
+    from var(--ai-trigger-angle),
+    #0d793d,
+    #34d399,
+    #86efac,
+    #34d399,
+    #0d793d
+  );
+  animation: ai-trigger-spin 7s linear infinite;
+}
+
+.dark [data-ai-chat-trigger],
+.dark [data-ai-chat-trigger]::after {
+  background: conic-gradient(
+    from var(--ai-trigger-angle),
+    #15803d,
+    #22c55e,
+    #6ee7b7,
+    #22c55e,
+    #15803d
+  );
+}
+
+[data-ai-chat-trigger]::after {
+  content: '';
+  position: absolute;
+  inset: -0.5rem;
+  z-index: -1;
+  border-radius: inherit;
+  filter: blur(0.875rem);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+[data-ai-chat-trigger]:hover::after {
+  opacity: 0.75;
+}
+
+@keyframes ai-trigger-spin {
+  to {
+    --ai-trigger-angle: 360deg;
+  }
+}
+
 @media (min-width: 64rem) {
   #nd-docs-layout {
     width: 100%;
@@ -176,7 +229,9 @@ article {
 
   .ai-agent-dot-grid > span,
   .ai-agent-thinking-label,
-  .ai-agent-progress-pulse {
+  .ai-agent-progress-pulse,
+  [data-ai-chat-trigger],
+  [data-ai-chat-trigger]::after {
     animation: none !important;
   }
 

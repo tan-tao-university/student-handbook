@@ -771,10 +771,9 @@ export function AISearchTrigger({
       aria-expanded={open}
       className={cn(
         position === 'float' && [
-          'group fixed bottom-4 right-4 z-40 flex cursor-pointer items-center gap-2 rounded-full py-1.5 pr-3 pl-1.5',
-          'md:bottom-5 md:right-5 md:gap-2.5 md:py-2 md:pr-4 md:pl-2',
-          'lg:bottom-6 lg:right-6 lg:gap-3 lg:py-2.5 lg:pr-5 lg:pl-2.5',
-          'border border-zinc-200 bg-white shadow-md ring-1 ring-black/5 dark:border-zinc-800 dark:bg-zinc-950 dark:ring-white/10',
+          'group fixed bottom-4 right-4 z-40 cursor-pointer rounded-full p-[1.5px] shadow-md',
+          'md:bottom-5 md:right-5',
+          'lg:bottom-6 lg:right-6',
           'transition-[transform,opacity,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d793d]',
           open && 'pointer-events-none translate-y-4 opacity-0',
         ],
@@ -783,17 +782,19 @@ export function AISearchTrigger({
       onClick={() => setOpen(!open)}
       {...props}
     >
-      <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#eef8f2] md:size-8 lg:size-9 dark:bg-white/10">
-        <Image
-          src="/logo-ttu.png"
-          alt=""
-          width={24}
-          height={28}
-          className="h-4 w-3.5 object-contain transition-transform duration-200 group-hover:scale-105 md:h-[23px] md:w-5 lg:h-7 lg:w-6"
-        />
-      </span>
-      <span className="text-xs leading-none font-semibold whitespace-nowrap text-zinc-900 md:text-[13px] lg:text-sm dark:text-zinc-50">
-        Trợ lý sinh viên TTU
+      <span className="flex items-center gap-2 rounded-full bg-white py-1.5 pr-3 pl-1.5 md:gap-2.5 md:py-2 md:pr-4 md:pl-2 lg:gap-3 lg:py-2.5 lg:pr-5 lg:pl-2.5 dark:bg-zinc-950">
+        <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#eef8f2] md:size-8 lg:size-9 dark:bg-white/10">
+          <Image
+            src="/logo-ttu.png"
+            alt=""
+            width={24}
+            height={28}
+            className="h-4 w-3.5 object-contain transition-transform duration-200 group-hover:scale-105 md:h-[23px] md:w-5 lg:h-7 lg:w-6"
+          />
+        </span>
+        <span className="text-xs leading-none font-semibold whitespace-nowrap text-zinc-900 md:text-[13px] lg:text-sm dark:text-zinc-50">
+          Trợ lý sinh viên TTU
+        </span>
       </span>
     </button>
   );
