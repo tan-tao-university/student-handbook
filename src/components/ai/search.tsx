@@ -13,23 +13,22 @@ import {
   useRef,
   useState,
 } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
   Add01Icon,
+  ArrowDown01Icon,
+  ArrowExpandDiagonal02Icon,
   ArrowRight01Icon,
+  ArrowShrink02Icon,
   ArrowUp01Icon,
   Award01Icon,
   Building01Icon,
+  Cancel01Icon,
   CheckmarkCircle02Icon,
-  CustomerSupportIcon,
-  Delete02Icon,
   File01Icon,
   GraduationCapIcon,
-  MoreHorizontalIcon,
-  PanelRightCloseIcon,
   StopIcon,
   ThumbsDownIcon,
   ThumbsUpIcon,
@@ -55,6 +54,8 @@ export type SearchTool = Tool<{ query: string; limit: number }, any>;
 interface AISearchContextValue {
   open: boolean;
   setOpen: (open: boolean) => void;
+  expanded: boolean;
+  setExpanded: (expanded: boolean) => void;
   chat: UseChatHelpers<ChatUIMessage>;
   handleSuggestionClick: (prompt: string) => void;
 }
@@ -155,22 +156,8 @@ function MarkdownRenderer({ text }: { text: string }) {
  * Notion-style Top Bar (Matching Image #2 & Image #3)
  */
 function AISearchPanelHeader() {
-  const { setOpen } = useAISearchContext();
-  const { messages, setMessages } = useAISearchContext().chat;
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setMenuOpen(false);
-      }
-    }
-    if (menuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [menuOpen]);
+  const { setOpen, expanded, setExpanded } = useAISearchContext();
+  const { setMessages } = useAISearchContext().chat;
 
   return (
     <header className="relative shrink-0 border-b border-zinc-200/80 bg-white dark:border-zinc-800 dark:bg-black">
@@ -195,45 +182,20 @@ function AISearchPanelHeader() {
             <HugeiconsIcon icon={Add01Icon} size={16} strokeWidth={2} />
           </button>
 
-          <div className="relative" ref={menuRef}>
-            <button
-              type="button"
-              aria-label="Tùy chọn khác"
-              aria-expanded={menuOpen}
-              title="Tùy chọn khác"
-              className="flex size-7 cursor-pointer items-center justify-center rounded-md text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d793d] dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <HugeiconsIcon icon={MoreHorizontalIcon} size={16} strokeWidth={2} />
-            </button>
-
-            {menuOpen && (
-              <div className="absolute right-0 top-8 z-50 w-52 rounded-lg border border-zinc-200 bg-white p-1 text-xs shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
-                <Link
-                  href="/lien-he/danh-ba-lien-he"
-                  className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors font-medium no-underline"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  <HugeiconsIcon icon={CustomerSupportIcon} size={14} strokeWidth={2} />
-                  <span>Danh bạ liên hệ TTU</span>
-                </Link>
-
-                {messages.length > 0 && (
-                  <button
-                    type="button"
-                    className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/40 transition-colors font-medium cursor-pointer"
-                    onClick={() => {
-                      setMessages([]);
-                      setMenuOpen(false);
-                    }}
-                  >
-                    <HugeiconsIcon icon={Delete02Icon} size={14} strokeWidth={2} />
-                    <span>Xóa lịch sử chat</span>
-                  </button>
-                )}
-              </div>
-            )}
-          </div>
+          <button
+            type="button"
+            aria-label={expanded ? 'Thu nhỏ cửa sổ' : 'Mở rộng cửa sổ'}
+            title={expanded ? 'Thu nhỏ cửa sổ' : 'Mở rộng cửa sổ'}
+            aria-pressed={expanded}
+            className="hidden size-7 cursor-pointer items-center justify-center rounded-md text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d793d] lg:flex dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
+            onClick={() => setExpanded(!expanded)}
+          >
+            <HugeiconsIcon
+              icon={expanded ? ArrowShrink02Icon : ArrowExpandDiagonal02Icon}
+              size={16}
+              strokeWidth={2}
+            />
+          </button>
 
           <button
             type="button"
@@ -242,7 +204,7 @@ function AISearchPanelHeader() {
             className="flex size-7 cursor-pointer items-center justify-center rounded-md text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d793d] dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
             onClick={() => setOpen(false)}
           >
-            <HugeiconsIcon icon={PanelRightCloseIcon} size={16} strokeWidth={2} />
+            <HugeiconsIcon icon={Cancel01Icon} size={16} strokeWidth={2} />
           </button>
         </div>
       </div>
@@ -395,10 +357,6 @@ function AISearchInput() {
           </span>
 
           <div className="flex items-center gap-2">
-            <span className="text-[11px] font-medium text-zinc-400 dark:text-zinc-500">
-              Tự động
-            </span>
-
             {isLoading ? (
               <button
                 type="button"
@@ -709,7 +667,8 @@ function Message({ message, active }: { message: ChatUIMessage; active: boolean 
 }
 
 export function AISearch({ children }: { children: ReactNode }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpenState] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const chat = useChat<ChatUIMessage>({
     id: 'ttu-handbook-ai-search',
     transport: new DefaultChatTransport({
@@ -739,9 +698,14 @@ export function AISearch({ children }: { children: ReactNode }) {
     [chat],
   );
 
+  const setOpen = useCallback((value: boolean) => {
+    setOpenState(value);
+    if (!value) setExpanded(false);
+  }, []);
+
   const contextValue = useMemo(
-    () => ({ chat, open, setOpen, handleSuggestionClick }),
-    [chat, open, handleSuggestionClick],
+    () => ({ chat, open, setOpen, expanded, setExpanded, handleSuggestionClick }),
+    [chat, open, expanded, handleSuggestionClick, setOpen],
   );
 
   useEffect(() => {
@@ -767,28 +731,48 @@ export function AISearchTrigger({
       type="button"
       data-ai-chat-trigger=""
       data-state={open ? 'open' : 'closed'}
-      aria-label="Mở Trợ lý AI"
       aria-controls="ttu-ai-chat-panel"
       aria-expanded={open}
+      aria-label={open ? 'Thu nhỏ Trợ lý sinh viên TTU' : undefined}
       className={cn(
         position === 'float' && [
-          'group fixed bottom-5 right-5 z-40 flex size-11 cursor-pointer items-center justify-center rounded-full',
-          'border border-zinc-200 bg-white shadow-md ring-1 ring-black/5 dark:border-zinc-800 dark:bg-zinc-950 dark:ring-white/10',
-          'transition-[transform,opacity,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d793d]',
-          open && 'pointer-events-none translate-y-4 opacity-0',
+          'group fixed z-40 cursor-pointer shadow-md transition-[transform,opacity,box-shadow] duration-300 ease-out',
+          'bottom-4 right-4 md:bottom-5 md:right-5 lg:bottom-6 lg:right-6',
+          'hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d793d]',
+          !open && 'rounded-full p-[1.5px]',
+          open && [
+            'pointer-events-none translate-y-4 opacity-0',
+            'lg:pointer-events-auto lg:flex lg:size-12 lg:translate-y-0 lg:items-center lg:justify-center lg:rounded-full lg:bg-[#0d793d] lg:opacity-100 lg:dark:bg-[#22c55e]',
+          ],
         ],
         className,
       )}
       onClick={() => setOpen(!open)}
       {...props}
     >
-      <Image
-        src="/logo-ttu.png"
-        alt=""
-        width={25}
-        height={29}
-        className="transition-transform duration-200 group-hover:scale-105"
-      />
+      {open ? (
+        <HugeiconsIcon
+          icon={ArrowDown01Icon}
+          size={20}
+          strokeWidth={2.25}
+          className="hidden text-white lg:block"
+        />
+      ) : (
+        <span className="flex items-center gap-2 rounded-full bg-white py-1.5 pr-3 pl-1.5 md:gap-2.5 md:py-2 md:pr-4 md:pl-2 lg:gap-3 lg:py-2.5 lg:pr-5 lg:pl-2.5 dark:bg-zinc-950">
+          <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#eef8f2] md:size-8 lg:size-9 dark:bg-white/10">
+            <Image
+              src="/logo-ttu.png"
+              alt=""
+              width={24}
+              height={28}
+              className="h-4 w-3.5 object-contain transition-transform duration-200 group-hover:scale-105 md:h-[23px] md:w-5 lg:h-7 lg:w-6"
+            />
+          </span>
+          <span className="text-xs leading-none font-semibold whitespace-nowrap text-zinc-900 md:text-[13px] lg:text-sm dark:text-zinc-50">
+            Trợ lý sinh viên TTU
+          </span>
+        </span>
+      )}
     </button>
   );
 }
@@ -797,7 +781,7 @@ export function AISearchTrigger({
  * Notion-style Right Sidebar Panel (Matching Image #2 & Image #3)
  */
 export function AISearchPanel() {
-  const { open, setOpen } = useAISearchContext();
+  const { open, setOpen, expanded } = useAISearchContext();
   const [actualOpen, setActualOpen] = useState(open);
   const openedOnce = useRef(false);
   useHotKey();
@@ -840,10 +824,14 @@ export function AISearchPanel() {
           aria-hidden={!open}
           inert={!open}
           className={cn(
-            'fixed inset-y-0 right-0 z-50 flex w-full flex-col lg:w-[var(--ai-chat-width)]',
-            'border-l border-zinc-200 bg-white text-zinc-900 shadow-2xl dark:border-zinc-800 dark:bg-black dark:text-zinc-100 lg:shadow-none',
-            'transition-transform duration-300 ease-out motion-reduce:transition-none',
-            open ? 'translate-x-0' : 'translate-x-full',
+            'fixed inset-0 z-50 flex flex-col overflow-hidden',
+            'border border-zinc-200 bg-white text-zinc-900 shadow-2xl dark:border-zinc-800 dark:bg-black dark:text-zinc-100',
+            'transition-[transform,opacity,top,width] duration-300 ease-out motion-reduce:transition-none',
+            'lg:inset-auto lg:right-6 lg:bottom-24 lg:origin-bottom-right lg:rounded-2xl',
+            expanded ? 'lg:top-6 lg:w-[min(48rem,45vw)]' : 'lg:top-24 lg:w-[var(--ai-chat-width)]',
+            open
+              ? 'translate-x-0 lg:scale-100 lg:opacity-100'
+              : 'translate-x-full lg:translate-x-0 lg:scale-95 lg:opacity-0',
           )}
           onTransitionEnd={() => {
             if (!open) setActualOpen(false);
