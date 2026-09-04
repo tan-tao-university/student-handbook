@@ -1,5 +1,6 @@
 {
   "$schema": "https://unpkg.com/knip@5/overview/configuration.json",
-  "ignore": ["src/lib/cn.ts"],
-  "ignoreDependencies": ["cnfast"]
+  "ignore": ["src/lib/cn.ts", "ecosystem.config.cjs"],
+  "ignoreDependencies": ["cnfast"],
+  "ignoreBinaries": ["pm2"]
 }
