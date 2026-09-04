@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'student-handbook',
       script: 'node_modules/next/dist/bin/next',
-      args: `start -p ${process.env.PORT || 65201}`,
+      args: `start -p ${process.env.PORT || 65200}`,
       cwd: './',
       instances: 1,
       autorestart: true,
@@ -11,7 +11,7 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: process.env.PORT || 65201,
+        PORT: process.env.PORT || 65200,
       },
     },
   ],

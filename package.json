@@ -6,7 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "start:prod": "next start -p ${PORT:-65201}",
+    "start:prod": "next start -p ${PORT:-65200}",
     "pm2:start": "pm2 start ecosystem.config.cjs",
     "pm2:stop": "pm2 stop student-handbook",
     "pm2:restart": "pm2 restart student-handbook",
