@@ -9,6 +9,12 @@ import {
   Coins01Icon,
   InformationCircleIcon,
 } from '@hugeicons/core-free-icons';
+import {
+  BANK_TRANSFER_ACCOUNTS,
+  BANK_TRANSFER_CONTENT_EXAMPLE,
+  BANK_TRANSFER_CONTENT_PATTERN,
+  DIRECT_PAYMENT_DETAILS,
+} from '@/lib/handbook-content';
 
 interface CopyableFieldProps {
   label: string;
@@ -64,27 +70,7 @@ function CopyableField({ label, value, displayValue, copyValue }: CopyableFieldP
 
 export function BankTransferCard() {
   const [activeTab, setActiveTab] = useState<'longan' | 'hcm'>('longan');
-
-  const accounts = {
-    longan: {
-      bankName: 'Ngân hàng TMCP Quốc Dân',
-      bankShortName: 'NCB',
-      branch: 'Chi nhánh Long An',
-      accountNumber: '100001166217',
-      accountNumberFormatted: '10000 1166 217',
-      beneficiary: 'TRƯỜNG ĐẠI HỌC TÂN TẠO',
-    },
-    hcm: {
-      bankName: 'Ngân hàng TMCP Quốc Dân',
-      bankShortName: 'NCB',
-      branch: 'Chi nhánh TP. Hồ Chí Minh',
-      accountNumber: '100000115554',
-      accountNumberFormatted: '10000 0115 554',
-      beneficiary: 'TRƯỜNG ĐẠI HỌC TÂN TẠO',
-    },
-  };
-
-  const current = accounts[activeTab];
+  const current = BANK_TRANSFER_ACCOUNTS[activeTab];
 
   return (
     <div className="my-6 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black p-5 md:p-6 shadow-none">
@@ -144,9 +130,9 @@ export function BankTransferCard() {
         <CopyableField label="Tên đơn vị thụ hưởng" value={current.beneficiary} />
         <CopyableField
           label="Cú pháp nội dung chuyển khoản mẫu"
-          value="23010012 Nguyen Van A Hoc phi HK1 2023-2024"
-          displayValue="[Mã SV] [Họ và tên] Hoc phi [Học kỳ] [Năm học]"
-          copyValue="[MSSV] [Họ tên] Hoc phi HK1 2023-2024"
+          value={BANK_TRANSFER_CONTENT_EXAMPLE}
+          displayValue={BANK_TRANSFER_CONTENT_PATTERN}
+          copyValue={BANK_TRANSFER_CONTENT_PATTERN}
         />
       </div>
 
@@ -163,7 +149,7 @@ export function BankTransferCard() {
           <p className="my-0">
             <strong>Ví dụ cú pháp mẫu:</strong>{' '}
             <code className="px-1.5 py-0.5 rounded bg-white dark:bg-zinc-800 border border-emerald-200 dark:border-emerald-800 text-[#0d793d] dark:text-[#22c55e] font-mono text-xs">
-              23010012 Nguyen Van A Hoc phi HK1 2023-2024
+              {BANK_TRANSFER_CONTENT_EXAMPLE}
             </code>
             .
           </p>
@@ -192,16 +178,13 @@ export function DirectPaymentCard() {
 
       <div className="mt-3 space-y-2 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
         <p className="my-1">
-          - <strong>Địa điểm</strong>: Phòng Tài chính – Kế toán, Tòa nhà Điều hành, Trường Đại học
-          Tân Tạo.
+          - <strong>Địa điểm</strong>: {DIRECT_PAYMENT_DETAILS.location}.
         </p>
         <p className="my-1">
-          - <strong>Địa chỉ</strong>: Đại lộ Đại học Tân Tạo, Tân Đức E.City, Huyện Đức Hòa, Tỉnh
-          Long An.
+          - <strong>Địa chỉ</strong>: {DIRECT_PAYMENT_DETAILS.address}.
         </p>
         <p className="my-1">
-          - <strong>Thời gian làm việc</strong>: Thứ Hai đến Thứ Sáu (Sáng: 8h00 – 12h00 | Chiều:
-          13h00 – 17h00).
+          - <strong>Thời gian làm việc</strong>: {DIRECT_PAYMENT_DETAILS.officeHours}.
         </p>
       </div>
     </div>

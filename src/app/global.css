@@ -3,6 +3,8 @@
 @import 'fumadocs-ui/css/preset.css';
 
 :root {
+  --ai-agent-accent: #0d793d;
+  --ai-chat-width: clamp(23.75rem, 24vw, 26rem);
   --color-fd-background: #ffffff;
   --color-fd-foreground: #09090b;
   --color-fd-muted: #f4f4f5;
@@ -22,6 +24,7 @@
 }
 
 .dark {
+  --ai-agent-accent: #22c55e;
   --color-fd-background: #000000; /* Pure black */
   --color-fd-foreground: #f4f4f5;
   --color-fd-muted: #111113;
@@ -55,10 +58,132 @@ h6 a {
 }
 
 /* Document layout: prevent page from sinking down too deep */
-#nd-docs-layout > div,
+#nd-docs-layout > div:not([data-ai-chat-panel]),
 [data-container],
 article {
   padding-top: 1.25rem !important;
+}
+
+[data-ai-chat-panel] {
+  padding-top: 0 !important;
+}
+
+[data-ai-chat-panel] h2,
+[data-ai-chat-panel] h3,
+[data-ai-chat-panel] p {
+  margin-top: 0 !important;
+}
+
+.ai-agent-dot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 0.1875rem);
+  gap: 0.125rem;
+  width: 0.8125rem;
+}
+
+.ai-agent-dot-grid > span {
+  width: 0.1875rem;
+  height: 0.1875rem;
+  border-radius: 9999px;
+  background: var(--ai-agent-accent);
+  opacity: 0.22;
+  animation: ai-agent-dot-wave 1.35s ease-in-out infinite;
+}
+
+.ai-agent-dot-grid > span:nth-child(2),
+.ai-agent-dot-grid > span:nth-child(4) {
+  animation-delay: 90ms;
+}
+
+.ai-agent-dot-grid > span:nth-child(3),
+.ai-agent-dot-grid > span:nth-child(5),
+.ai-agent-dot-grid > span:nth-child(7) {
+  animation-delay: 180ms;
+}
+
+.ai-agent-dot-grid > span:nth-child(6),
+.ai-agent-dot-grid > span:nth-child(8) {
+  animation-delay: 270ms;
+}
+
+.ai-agent-dot-grid > span:nth-child(9) {
+  animation-delay: 360ms;
+}
+
+.ai-agent-thinking-label {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    var(--color-fd-muted-foreground) 20%,
+    var(--ai-agent-accent) 48%,
+    var(--color-fd-muted-foreground) 76%
+  );
+  background-size: 220% 100%;
+  background-clip: text;
+  animation: ai-agent-label-shimmer 2.1s linear infinite;
+}
+
+.ai-agent-progress-pulse {
+  animation: ai-agent-progress-pulse 1.6s ease-out infinite;
+}
+
+@keyframes ai-agent-dot-wave {
+  0%,
+  55%,
+  100% {
+    opacity: 0.22;
+    transform: scale(0.78);
+  }
+
+  24% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes ai-agent-label-shimmer {
+  to {
+    background-position: -220% 0;
+  }
+}
+
+@keyframes ai-agent-progress-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--ai-agent-accent) 24%, transparent);
+  }
+
+  50% {
+    box-shadow: 0 0 0 0.1875rem transparent;
+  }
+}
+
+@media (min-width: 64rem) {
+  #nd-docs-layout {
+    width: 100%;
+    transition: width 300ms ease-out;
+  }
+
+  html[data-ai-chat-open] #nd-docs-layout {
+    width: calc(100% - var(--ai-chat-width));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #nd-docs-layout {
+    transition: none !important;
+  }
+
+  .ai-agent-dot-grid > span,
+  .ai-agent-thinking-label,
+  .ai-agent-progress-pulse {
+    animation: none !important;
+  }
+
+  .ai-agent-thinking-label {
+    color: inherit;
+    background: none;
+  }
 }
 
 /* First content item right below header divider */

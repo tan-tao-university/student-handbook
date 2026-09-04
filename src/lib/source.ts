@@ -3,13 +3,16 @@ import { resolveHugeIcon } from './hugeicons-resolver';
 import { docsContentRoute, docsImageRoute, docsRoute } from './shared';
 import { defineDocs } from 'fumadocs-mdx/macro';
 import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
+import { renderAssistantPageText } from './assistant-page-text';
 
 const docs = defineDocs({
   dir: 'content/docs',
   docs: {
     schema: pageSchema,
     postprocess: {
-      includeProcessedMarkdown: true,
+      includeProcessedMarkdown: {
+        mdxAsPlaceholder: ['BankTransferCard', 'DirectPaymentCard', 'RegistrationSteps'],
+      },
     },
   },
   meta: {
@@ -46,8 +49,9 @@ export function getPageMarkdownUrl(page: (typeof source)['$inferPage']) {
 
 export async function getLLMText(page: (typeof source)['$inferPage']) {
   const processed = await page.data.getText('processed');
+  const content = await renderAssistantPageText(processed);
 
   return `# ${page.data.title} (${page.url})
 
-${processed}`;
+${content}`;
 }
