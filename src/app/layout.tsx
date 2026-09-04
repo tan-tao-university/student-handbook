@@ -10,7 +10,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://sotay.ttu.edu.vn'),
+      (process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : 'https://std-handbook.ttu.edu.vn'),
   ),
   title: {
     default: 'Sổ tay Sinh viên TTU - Đại học Tân Tạo',
