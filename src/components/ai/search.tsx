@@ -19,6 +19,7 @@ import { usePathname } from 'next/navigation';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
   Add01Icon,
+  ArrowDown01Icon,
   ArrowRight01Icon,
   ArrowUp01Icon,
   Award01Icon,
@@ -769,33 +770,46 @@ export function AISearchTrigger({
       data-state={open ? 'open' : 'closed'}
       aria-controls="ttu-ai-chat-panel"
       aria-expanded={open}
+      aria-label={open ? 'Thu nhỏ Trợ lý sinh viên TTU' : undefined}
       className={cn(
         position === 'float' && [
-          'group fixed bottom-4 right-4 z-40 cursor-pointer rounded-full p-[1.5px] shadow-md',
-          'md:bottom-5 md:right-5',
-          'lg:bottom-6 lg:right-6',
-          'transition-[transform,opacity,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d793d]',
-          open && 'pointer-events-none translate-y-4 opacity-0',
+          'group fixed z-40 cursor-pointer shadow-md transition-[transform,opacity,box-shadow] duration-300 ease-out',
+          'bottom-4 right-4 md:bottom-5 md:right-5 lg:bottom-6 lg:right-6',
+          'hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d793d]',
+          !open && 'rounded-full p-[1.5px]',
+          open && [
+            'pointer-events-none translate-y-4 opacity-0',
+            'lg:pointer-events-auto lg:flex lg:size-12 lg:translate-y-0 lg:items-center lg:justify-center lg:rounded-full lg:bg-[#0d793d] lg:opacity-100 lg:dark:bg-[#22c55e]',
+          ],
         ],
         className,
       )}
       onClick={() => setOpen(!open)}
       {...props}
     >
-      <span className="flex items-center gap-2 rounded-full bg-white py-1.5 pr-3 pl-1.5 md:gap-2.5 md:py-2 md:pr-4 md:pl-2 lg:gap-3 lg:py-2.5 lg:pr-5 lg:pl-2.5 dark:bg-zinc-950">
-        <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#eef8f2] md:size-8 lg:size-9 dark:bg-white/10">
-          <Image
-            src="/logo-ttu.png"
-            alt=""
-            width={24}
-            height={28}
-            className="h-4 w-3.5 object-contain transition-transform duration-200 group-hover:scale-105 md:h-[23px] md:w-5 lg:h-7 lg:w-6"
-          />
+      {open ? (
+        <HugeiconsIcon
+          icon={ArrowDown01Icon}
+          size={20}
+          strokeWidth={2.25}
+          className="hidden text-white lg:block"
+        />
+      ) : (
+        <span className="flex items-center gap-2 rounded-full bg-white py-1.5 pr-3 pl-1.5 md:gap-2.5 md:py-2 md:pr-4 md:pl-2 lg:gap-3 lg:py-2.5 lg:pr-5 lg:pl-2.5 dark:bg-zinc-950">
+          <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#eef8f2] md:size-8 lg:size-9 dark:bg-white/10">
+            <Image
+              src="/logo-ttu.png"
+              alt=""
+              width={24}
+              height={28}
+              className="h-4 w-3.5 object-contain transition-transform duration-200 group-hover:scale-105 md:h-[23px] md:w-5 lg:h-7 lg:w-6"
+            />
+          </span>
+          <span className="text-xs leading-none font-semibold whitespace-nowrap text-zinc-900 md:text-[13px] lg:text-sm dark:text-zinc-50">
+            Trợ lý sinh viên TTU
+          </span>
         </span>
-        <span className="text-xs leading-none font-semibold whitespace-nowrap text-zinc-900 md:text-[13px] lg:text-sm dark:text-zinc-50">
-          Trợ lý sinh viên TTU
-        </span>
-      </span>
+      )}
     </button>
   );
 }
@@ -847,10 +861,13 @@ export function AISearchPanel() {
           aria-hidden={!open}
           inert={!open}
           className={cn(
-            'fixed inset-y-0 right-0 z-50 flex w-full flex-col lg:w-[var(--ai-chat-width)]',
-            'border-l border-zinc-200 bg-white text-zinc-900 shadow-2xl dark:border-zinc-800 dark:bg-black dark:text-zinc-100 lg:shadow-none',
-            'transition-transform duration-300 ease-out motion-reduce:transition-none',
-            open ? 'translate-x-0' : 'translate-x-full',
+            'fixed inset-0 z-50 flex flex-col overflow-hidden',
+            'border border-zinc-200 bg-white text-zinc-900 shadow-2xl dark:border-zinc-800 dark:bg-black dark:text-zinc-100',
+            'transition-[transform,opacity] duration-300 ease-out motion-reduce:transition-none',
+            'lg:inset-auto lg:top-24 lg:right-6 lg:bottom-24 lg:w-[var(--ai-chat-width)] lg:origin-bottom-right lg:rounded-2xl',
+            open
+              ? 'translate-x-0 lg:scale-100 lg:opacity-100'
+              : 'translate-x-full lg:translate-x-0 lg:scale-95 lg:opacity-0',
           )}
           onTransitionEnd={() => {
             if (!open) setActualOpen(false);
