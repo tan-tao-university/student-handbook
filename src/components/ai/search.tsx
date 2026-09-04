@@ -353,7 +353,7 @@ function AISearchInput() {
 
         <div className="mt-1 flex items-center justify-between pt-1">
           <span className="text-[10px] text-zinc-400 dark:text-zinc-500">
-            Enter để gửi · Shift + Enter xuống dòng
+            Enter để gửi - Shift + Enter xuống dòng
           </span>
 
           <div className="flex items-center gap-2">
