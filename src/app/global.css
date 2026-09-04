@@ -64,6 +64,13 @@ article {
   padding-top: 1.25rem !important;
 }
 
+/* Collapsing the sidebar renders a floating re-expand toggle fixed over the
+   page's top-left corner; give the article enough clearance so its content
+   doesn't render underneath that floating control. */
+#nd-docs-layout[data-sidebar-collapsed='true'] article {
+  padding-top: 6rem !important;
+}
+
 [data-ai-chat-panel] {
   padding-top: 0 !important;
 }
