@@ -1,39 +1,81 @@
 ---
 title: Quy định Học phí & Thanh toán
-description: Chính sách học phí cố định, thời hạn đóng học phí từng học kỳ và hướng dẫn thủ tục chuyển khoản ngân hàng tại TTU.
+description: Chính sách học phí, thời hạn nộp, công thức tính phạt trễ hạn 0.033%/ngày, bảng hoàn trả học phí và hướng dẫn thanh toán tại Trường Đại học Tân Tạo.
 ---
 
-## 1. Chính sách Học phí Cố định
+import { Callout } from 'fumadocs-ui/components/callout';
+import { BankTransferCard, DirectPaymentCard } from '@/components/payment-cards';
 
-Tại Đại học Tân Tạo, chính sách học phí được công khai minh bạch ngay từ kỳ tuyển sinh đầu khóa:
+Tại Trường Đại học Tân Tạo (ĐHTT), chính sách học phí và các khoản thu được quy định minh bạch, công khai vào đầu mỗi học kỳ căn cứ theo Quyết định thu học phí của Nhà trường.
 
-- **Cam kết không tăng học phí**: Mức học phí của sinh viên khóa mới được quy định trong Đề án tuyển sinh hằng năm và **được giữ nguyên không đổi trong suốt toàn bộ khóa học chuẩn** của ngành đào tạo đó.
-- Sinh viên có thể tra cứu chi tiết mức học phí theo ngành trên website chính thức [tuyensinh.ttu.edu.vn](https://tuyensinh.ttu.edu.vn/).
+## 1. Hình thức & Thời hạn Nộp Học phí
 
-## 2. Thời hạn Nộp Học phí & Tra cứu trên MyTTU
+### 1.1. Hình thức thu học phí
 
-- **Tra cứu học phí cá nhân**: Sau khi đăng ký các học phần trên cổng đào tạo [my.ttu.edu.vn](https://my.ttu.edu.vn), sinh viên chọn mục **"Danh sách môn học đã đăng ký"** để kiểm tra các học phần đã chọn và xem chính xác tổng mức học phí tương ứng cần nộp.
-- **Thông báo học phí**: Đầu mỗi học kỳ, Phòng Tài chính - Kế toán phối hợp cùng Phòng Quản lý Đào tạo ban hành thông báo thu học phí chi tiết.
-- **Thời hạn hoàn thành**: Sinh viên phải hoàn tất nộp học phí theo đúng thời hạn quy định trong thông báo để được phê duyệt thời khóa biểu chính thức.
+- Thu bằng tiền mặt trực tiếp hoặc chuyển khoản qua ngân hàng theo Thông báo thu học phí được cập nhật hằng năm trên trang web của trường (`ttu.edu.vn`).
+- Mức thu học phí được quy định chi tiết trong Quyết định thu học phí từng học kỳ (thu theo niên chế hoặc theo số lượng tín chỉ sinh viên đăng ký).
 
-<Callout type="error" title="Hậu quả của việc nợ học phí không có lý do chính đáng">
+### 1.2. Thời hạn nộp học phí
 
-Sinh viên chưa hoàn thành học phí đúng hạn sẽ chịu các chế tài học vụ nghiêm khắc:
+- **Sinh viên hiện hữu**: Học phí được thu vào đầu mỗi học kỳ trong thời hạn theo thông báo của Nhà trường.
+- **Tân sinh viên**: Thời hạn nộp học phí theo thông báo trên giấy báo trúng tuyển trong quá trình hoàn thành hồ sơ nhập học.
+- **Sinh viên năm cuối**: Phải hoàn tất các khoản học phí, lệ phí và các khoản thu bắt buộc khác trước khi Hội đồng xét đủ điều kiện thi tốt nghiệp hoặc bảo vệ khóa luận tốt nghiệp.
+- **Sinh viên thi lại**: Phải nộp phí thi lại trước khi vào phòng thi. Sinh viên không nộp phí thi lại sẽ không được vào phòng thi.
 
-- **Không được duyệt đăng ký học phần** chính thức của học kỳ và không được giải quyết rút bớt học phần.
-- **Bị xóa tên khỏi danh sách dự thi** kết thúc học phần của kỳ học đó (bị điểm 0).
-- **Bị xử lý kỷ luật theo khung lũy tiến**: L1 Nhắc nhở → L2 Khiển trách → L3 Cảnh cáo → L4 Đình chỉ học tập → L5 **Buộc thôi học**.
-- **Không được cấp các giấy tờ xác nhận**, bảng điểm tạm thời, không được xét cấp học bổng và không đủ điều kiện xét tốt nghiệp ra trường.
+---
 
-</Callout>
+## 2. Xử lý Chậm nộp Học phí & Công thức Tính Phí Trễ hạn
 
-## 3. Hướng dẫn Phương thức Thanh toán
+Sinh viên không hoàn thành nghĩa vụ học phí đúng thời hạn sẽ bị áp dụng các biện pháp chế tài:
 
-Sinh viên và phụ huynh có thể lựa chọn một trong hai phương thức thanh toán học phí thuận tiện dưới đây:
+1. **Hạn chế học vụ**: Sinh viên sẽ không được đăng ký các môn học của học kỳ tiếp theo, không được kiểm tra, đánh giá giữa kỳ trên lớp và **không được tham gia thi kết thúc môn** cho đến khi hoàn thành nghĩa vụ học phí.
+2. **Sinh viên năm cuối**: Không nộp học phí và các khoản lệ phí đúng hạn sẽ **không được xét đủ điều kiện để dự thi tốt nghiệp/bảo vệ khóa luận tốt nghiệp**, xét tốt nghiệp. Sinh viên chỉ được xét ở đợt tốt nghiệp kế tiếp sau khi đã nộp học phí đầy đủ.
+3. **Tân sinh viên**: Không được vào học nếu chưa hoàn tất nghĩa vụ học phí theo thông báo nhập học.
+4. **Cắt học bổng**: Sinh viên được áp dụng chính sách giảm học phí và học bổng mà nợ học phí quá thời hạn quy định sẽ bị **cắt tất cả học bổng và chính sách giảm học phí** đang được hưởng cho các học kỳ tiếp theo.
+5. **Gia hạn học phí**: Trong trường hợp có hoàn cảnh đặc biệt, sinh viên có đơn xin gia hạn học phí được Phòng Công tác sinh viên, Trưởng Khoa có ý kiến đồng ý và trình Hiệu trưởng phê duyệt cho sinh viên nộp muộn học phí thì được tạm hoãn các biện pháp xử lý trên.
+6. **Công thức tính phí phạt chậm nộp**: Sinh viên nộp học phí sau thời hạn hoặc sau thời hạn gia hạn đã phê duyệt phải nộp phí phạt chậm nộp:
+
+```txt
+Phí trễ hạn = Học phí còn phải nộp × 0,033%/ngày × Số ngày nợ
+```
+
+---
+
+## 3. Quy định Hoàn trả Học phí
+
+Nhà trường thực hiện hoàn trả học phí trong các trường hợp sau:
+
+- **Nộp thừa hoặc miễn học phí**: Sinh viên được hoàn trả lại tiền học phí đã nộp thừa của khóa học hoặc trường hợp sinh viên được miễn học phí toàn khóa nhưng đã nộp học phí lúc nhập học.
+- **Rút môn theo quy chế học vụ**: Sinh viên phải rút bớt môn học theo quy chế học vụ (đối với học chế tín chỉ) được **hoàn trả 100% học phí** đã nộp đối với những học phần được yêu cầu rút.
+- **Rút học phần vì lý do cá nhân** (bệnh tật, tai nạn, tài chính...): Mức hoàn trả căn cứ theo thời điểm nộp đơn xin rút:
+
+| Thời điểm xin rút học phần              | Mức học phí được hoàn trả |
+| :-------------------------------------- | :-----------------------: |
+| **Trước khi học kỳ bắt đầu**            |          **90%**          |
+| **Sau khi học kỳ bắt đầu 01 tuần**      |          **80%**          |
+| **Sau khi học kỳ bắt đầu 02 tuần**      |          **70%**          |
+| **Sau khi học kỳ bắt đầu 03 tuần**      |          **60%**          |
+| **Sau khi học kỳ bắt đầu trên 03 tuần** |  **Không hoàn trả (0%)**  |
+
+---
+
+## 4. Các Khoản Thu Khác
+
+- **Phí bảo trì cơ sở vật chất (CSVC)**: Đóng góp một phần cho việc phát triển, bảo trì và vận hành thiết bị giảng dạy, học tập. Phí CSVC được thu cùng kỳ với học phí; sinh viên nợ phí CSVC cũng được xem như chưa hoàn tất học phí.
+- **Phí in thẻ sinh viên**:
+  - Tất cả sinh viên mới nhập học thanh toán phí in thẻ sinh viên **100.000 VNĐ/thẻ** vào đầu học kỳ đầu tiên.
+  - Cấp lại thẻ sinh viên: Yêu cầu tại Phòng Công tác sinh viên và Hợp tác doanh nghiệp, đóng lệ phí **100.000 VNĐ/thẻ** về Phòng Tài chính - Kế toán.
+  - Trường hợp không mang thẻ cần vào phòng thi: Yêu cầu in giấy xác nhận tạm thời tại Phòng Quản lý Đào tạo.
+- **Phí trễ hạn và đền bù sách thư viện**: Người sử dụng thư viện nếu không trả sách đúng hạn sẽ bị phạt phí theo số ngày trễ; trễ từ 01 tháng trở đi hoặc sách bị hư hỏng phải nộp phí thay thế. Sinh viên không được mượn tiếp sách cho đến khi thanh toán xong phí phạt.
+- **Phí in bằng tốt nghiệp, sao y bằng hoặc xác nhận bảng điểm**: Đăng ký trực tiếp với Phòng Quản lý Đào tạo trước ngày tốt nghiệp theo mức phí công bố trên website trường.
+
+---
+
+## 5. Hướng dẫn Phương thức Thanh toán
 
 ### Hình thức 1: Chuyển khoản Ngân hàng (Khuyến khích)
 
-Sinh viên thực hiện chuyển khoản vào tài khoản chính thức của Trường Đại học Tân Tạo tại **Ngân hàng TMCP Quốc Dân (NCB)** (hỗ trợ bấm nút sao chép nhanh từng thông tin):
+Sinh viên chuyển khoản học phí vào tài khoản chính thức của Trường Đại học Tân Tạo tại Ngân hàng TMCP Quốc Dân (NCB):
 
 <BankTransferCard />
 
@@ -43,11 +85,9 @@ Sinh viên thực hiện chuyển khoản vào tài khoản chính thức của 
 
 ---
 
-## 4. Thông tin Liên hệ Phòng Tài chính - Kế toán
+## 6. Thông tin Liên hệ Phòng Tài chính - Kế toán
 
-Mọi thắc mắc về mức học phí, hóa đơn điện tử hoặc đối soát thanh toán chuyển khoản, sinh viên liên hệ:
-
-- **Kế toán trưởng**: Cô Nguyễn Thị Hoa — Email: `hoa.nguyen@ttu.edu.vn`
+- **Kế toán trưởng**: Nguyễn Thị Hoa — Email: `hoa.nguyen@ttu.edu.vn`
 - **Email phòng**: `accounting_dept@ttu.edu.vn`
-- **Hotline điện thoại**: `(0272) 376 9216` (Số máy lẻ / Ext: **174** hoặc **173**)
-- **Địa điểm làm việc**: Tòa nhà Levy, Trường Đại học Tân Tạo
+- **Số điện thoại phòng**: `(0272) 376 9216` (Ext: **173** hoặc **174**)
+- **Văn phòng**: Tòa nhà Levy, Trường Đại học Tân Tạo

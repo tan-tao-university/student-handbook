@@ -17,7 +17,10 @@ interface CardsProps extends ComponentProps<'div'> {
 
 export function Cards({ children, className = '', ...props }: CardsProps) {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 my-8 not-prose ${className}`} {...props}>
+    <div
+      className={`grid grid-cols-1 md:grid-cols-2 md:auto-rows-fr gap-4 my-8 not-prose ${className}`}
+      {...props}
+    >
       {children}
     </div>
   );
@@ -45,14 +48,14 @@ export function Card({
 
   const content = (
     <div
-      className={`group relative flex flex-col justify-between rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black p-5 transition-all duration-200 shadow-none ${
+      className={`group relative flex flex-col justify-between h-full w-full rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black p-5 transition-all duration-200 shadow-none ${
         href
           ? 'hover:border-[#0d793d] dark:hover:border-[#22c55e] hover:bg-emerald-50/20 dark:hover:bg-emerald-950/10 hover:-translate-y-0.5 cursor-pointer'
           : ''
       } ${className}`}
       {...props}
     >
-      <div>
+      <div className="flex flex-col h-full">
         <div className="flex items-center justify-between gap-2 mb-3.5">
           {renderedIcon ? (
             <div className="flex items-center justify-center size-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-[#0d793d] dark:text-[#22c55e] border border-emerald-100 dark:border-emerald-900/40 [&_svg]:size-5 shadow-none transition-colors group-hover:bg-[#0d793d] group-hover:text-white dark:group-hover:bg-[#22c55e] dark:group-hover:text-black">
@@ -86,7 +89,7 @@ export function Card({
 
   if (href) {
     return (
-      <Link href={href} className="no-underline block">
+      <Link href={href} className="no-underline flex flex-col h-full w-full">
         {content}
       </Link>
     );

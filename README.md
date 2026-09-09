@@ -35,7 +35,7 @@ Toàn bộ nội dung được số hóa trực tiếp từ tài liệu **Sổ t
 ┌──────────────────┐      ┌──────────────────┐                  ┌──────────────────┐      ┌──────────────────┐
 │ Học vụ & Đào tạo │      │ Lưu trú & KTX    │                  │Đánh giá Rèn luyện│      │Tài chính & H.Bổng│
 │• Đăng ký môn học │      │• Tiêu chuẩn KTX  │                  │• Điểm rèn luyện  │      │• Học phí cố định │
-│• Thang điểm 4.0  │      │• Nội quy nhà ăn  │                  │• TCKNM (120h/60h)│      │• HB Tài năng ITA │
+│• Thang điểm 4.0  │      │• Nội quy nhà ăn  │                  │• TCKNM (120h/60h)│      │• HB Đặng Văn Được│
 │• Rút bớt học phần│      │• Khung kỷ luật   │                  │• Chuẩn tốt nghiệp│      │• HB Vượt khó     │
 │• Liêm chính học  │      │• Xe buýt nội bộ  │                  │• Tiêu chí 100đ   │      │• Vay vốn ưu đãi  │
 └──────────────────┘      └──────────────────┘                  └──────────────────┘      └──────────────────┘
@@ -46,7 +46,7 @@ Toàn bộ nội dung được số hóa trực tiếp từ tài liệu **Sổ t
                                    ┌────────────────────────────────────┐
                                    │       Hỗ trợ & Dịch vụ Đời sống    │
                                    │ • Thư viện TTU (lib.ttu.edu.vn)    │
-                                   │ • Email SV (@student.ttu.edu.vn)   │
+                                   │ • Email SV (@std.ttu.edu.vn)       │
                                    │ • CLB, Hội Sinh viên & Thể thao    │
                                    │ • Quy tắc ứng xử & Khen thưởng     │
                                    │ • Thủ tục Một cửa & Danh bạ liên hệ│
@@ -71,7 +71,7 @@ Toàn bộ nội dung được số hóa trực tiếp từ tài liệu **Sổ t
 ### 3. 👥 Đời sống Sinh viên (`/doi-song-sinh-vien/`)
 
 - **Hoạt động & Câu lạc bộ**: Hệ thống CLB học thuật, văn hóa nghệ thuật, thể thao và tình nguyện trực thuộc Phòng CTSV quản lý.
-- **Hỗ trợ Sinh viên**: Kênh hỗ trợ đời sống, tư vấn tâm lý học đường, chính sách hỗ trợ vay vốn không tính lãi suất Quỹ ITA.
+- **Hỗ trợ Sinh viên**: Kênh hỗ trợ đời sống, tư vấn tâm lý học đường, chính sách hỗ trợ vay vốn không tính lãi suất Quỹ Đặng Văn Được.
 - **Quy tắc Ứng xử**: 10 quy tắc văn hóa ứng xử của sinh viên TTU, quy định đồng phục polo lịch sự và quy định đeo thẻ sinh viên bắt buộc.
 
 ### 4. 🏅 Đánh giá Rèn luyện & Kỹ năng mềm (`/ren-luyen/`)
@@ -87,17 +87,17 @@ Toàn bộ nội dung được số hóa trực tiếp từ tài liệu **Sổ t
 ### 6. 📚 Thư viện & Tài nguyên số (`/tai-nguyen/`)
 
 - **Thư viện TTU**: Giờ mở cửa 8h00 – 17h00 Thứ 2 – Thứ 6, bộ sưu tập gần 17.000 cuốn sách in (cập nhật 5/2026), CSDL ProQuest, học liệu mở quốc tế, 9 điều nội quy và hệ thống Koha.
-- **Email & Mạng Internet**: Cấp tài khoản `@student.ttu.edu.vn`, quy tắc an toàn thông tin mạng và thông tin Ban CNTT.
+- **Email & Mạng Internet**: Cấp tài khoản `@std.ttu.edu.vn`, quy tắc an toàn thông tin mạng, hệ thống MyTTU, LMS và thông tin Ban CNTT.
 - **Nghiên cứu Khoa học & Đổi mới sáng tạo**: Tài trợ đề tài NCKH sinh viên tối đa 30.000.000 VNĐ/đề tài (4 giai đoạn), Hội thảo NCKH thường niên, Ngày hội STEAM Day, Tạp chí TJS 2026 và kết nối khởi nghiệp tỉnh Tây Ninh.
 
 ### 7. 💵 Tài chính & Học bổng (`/tai-chinh/`)
 
 - **Học phí**: Chính sách cam kết học phí cố định, hướng dẫn kiểm tra học phí trên MyTTU, thông tin Kế toán trưởng và tài khoản thanh toán NCB.
-- **Học bổng Quỹ ITA**: Học bổng Tài năng ITA và Vượt khó ITASS (mức 100%, 75%, 50%), Hỗ trợ vay 0% lãi suất, điều kiện duy trì học bổng từng kỳ ($\ge 80\%$ hoạt động truyền thông), nghĩa vụ phục vụ quê hương ITASS và quy trình xét cấp 9 bước.
+- **Học bổng Quỹ Đặng Văn Được**: Học bổng Tài năng và Vượt khó ITASS (mức 100%, 75%, 50%), Hỗ trợ vay đóng học phí không tính lãi suất, điều kiện duy trì học bổng từng kỳ ($\ge 80\%$ hoạt động truyền thông), nghĩa vụ phục vụ quê hương và quy trình xét cấp 9 bước.
 
 ### 8. 📞 Hỗ trợ & Danh bạ Liên hệ (`/lien-he/`)
 
-- **Thủ tục Một cửa & FAQ**: Quy trình cấp giấy xác nhận SV, tạm hoãn NVQS, bảng điểm, phúc khảo thi (5 ngày), hồ sơ học bổng Quỹ ITA.
+- **Thủ tục Một cửa & FAQ**: Quy trình cấp giấy xác nhận SV, tạm hoãn NVQS, bảng điểm, phúc khảo thi (14 ngày), bảng các mốc thời gian cần nhớ, hồ sơ học bổng Quỹ Đặng Văn Được.
 - **Danh bạ Toàn diện**: Thông tin liên hệ Ban Giám hiệu, 8 phòng ban chức năng, Ban Thư viện, Ban CNTT, trường TTS, các trung tâm và Ban Chủ nhiệm & Thư ký của cả 7 Khoa chuyên môn.
 
 ---

@@ -1,99 +1,101 @@
 ---
-title: Đăng ký môn học
-description: Quy định và hướng dẫn quy trình lập kế hoạch học tập, số tín chỉ cho phép, đăng ký học lại và cải thiện điểm tại TTU.
+title: Đăng ký môn học & Công nhận tín chỉ
+description: Khung giờ học tập, quy trình lập kế hoạch học tập, thời hạn đăng ký học phần và quy định miễn học, công nhận chuyển điểm học phần tại TTU.
 ---
 
 import { Callout } from 'fumadocs-ui/components/callout';
-import { Tabs, Tab } from 'fumadocs-ui/components/tabs';
+import { RegistrationSteps } from '@/components/registration-steps';
 
-## 1. Thời gian giảng dạy & Khung thời gian học tập
+Căn cứ Điều 2, Điều 3, Điều 6, Điều 8, Điều 11 và Điều 12 Quy chế đào tạo của Trường Đại học Tân Tạo (ĐHTT):
 
-Thời gian mỗi tiết học tại Trường Đại học Tân Tạo được tính bằng **50 phút**. Khung giờ học tập cụ thể trong ngày như sau:
+## 1. Thời gian Giảng dạy & Khung Giờ Học tập
 
-| Buổi học / Tiết              | Khung giờ chi tiết                                                                                                                                 | Thời gian nghỉ giải lao                                       |
-| :--------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------ |
-| **Buổi sáng (Tiết 1 – 5)**   | **Tiết 1**: 07:10 – 08:00<br/>**Tiết 2**: 08:00 – 08:50<br/>**Tiết 3**: 08:50 – 09:40<br/>**Tiết 4**: 10:00 – 10:50<br/>**Tiết 5**: 10:50 – 11:40  | Nghỉ 20 phút giữa Tiết 3 và Tiết 4 (09:40 – 10:00)            |
-| **Buổi chiều (Tiết 6 – 10)** | **Tiết 6**: 13:00 – 13:50<br/>**Tiết 7**: 13:50 – 14:40<br/>**Tiết 8**: 15:00 – 15:50<br/>**Tiết 9**: 15:50 – 16:40<br/>**Tiết 10**: 16:40 – 17:30 | Nghỉ 20 phút giữa Tiết 7 và Tiết 8 (14:40 – 15:00)            |
-| **Buổi tối (Tiết 11 – 13)**  | **Tiết 11**: 18:00 – 18:50<br/>**Tiết 12**: 18:50 – 19:40<br/>**Tiết 13**: 19:40 – 20:30                                                           | Dành cho các lớp học phần tăng cường, cao học hoặc ngoại khóa |
+Thời gian mỗi tiết học được tính bằng **50 phút**. Khung giờ học tập cụ thể trong ngày:
 
-### Cơ cấu năm học
+| Buổi học  |  Tiết   |    Giờ học    | Nghỉ sau tiết                    |
+| :-------- | :-----: | :-----------: | :------------------------------- |
+| **Sáng**  | Tiết 1  | 07:10 – 08:00 | Không                            |
+|           | Tiết 2  | 08:00 – 08:50 | Không                            |
+|           | Tiết 3  | 08:50 – 09:40 | **Nghỉ 20 phút** (09:40 – 10:00) |
+|           | Tiết 4  | 10:00 – 10:50 | Không                            |
+|           | Tiết 5  | 10:50 – 11:40 | Nghỉ trưa                        |
+| **Chiều** | Tiết 6  | 13:00 – 13:50 | Không                            |
+|           | Tiết 7  | 13:50 – 14:40 | **Nghỉ 20 phút** (14:40 – 15:00) |
+|           | Tiết 8  | 15:00 – 15:50 | Không                            |
+|           | Tiết 9  | 15:50 – 16:40 | Không                            |
+|           | Tiết 10 | 16:40 – 17:30 | Kết thúc ca chiều                |
+| **Tối**   | Tiết 11 | 18:00 – 18:50 | Không                            |
+|           | Tiết 12 | 18:50 – 19:40 | Không                            |
+|           | Tiết 13 | 19:40 – 20:30 | Lớp tăng cường, cao học          |
 
-- **Năm học**: Gồm 02 học kỳ chính và 01 học kỳ phụ (học kỳ hè).
-  - **Học kỳ chính (Thu / Xuân)**: Mỗi học kỳ gồm **15 tuần thực học**, **01 tuần dự trữ** và **02 tuần thi**.
-  - **Học kỳ phụ (Hè)**: Gồm **08 tuần thực học**, **01 tuần dự trữ** và **01 tuần thi**, tổ chức trong thời gian nghỉ hè.
+### Cơ cấu năm học:
+
+- Một năm học có **02 học kỳ chính (Fall, Spring)** và **01 học kỳ phụ (Summer)**.
+- Mỗi học kỳ chính gồm **15 tuần thực học**, **01 tuần dự trữ** và **02 tuần thi**.
+- Học kỳ phụ tổ chức trong thời gian nghỉ hè để sinh viên học lại, học cải thiện hoặc học vượt tiến độ.
+- Sinh viên phải theo dõi kế hoạch năm học, thời khóa biểu, lịch thi và các thông báo đào tạo trên Cổng thông tin sinh viên [my.ttu.edu.vn](https://my.ttu.edu.vn).
 
 ---
 
-## 2. Hệ thống Tín chỉ & Học phần
+## 2. Học phần & Tín chỉ
 
-- **Khối lượng toàn khóa trình độ đại học**: Từ **130 đến 210 tín chỉ** (tùy theo ngành đào tạo). Ngoài ra còn các tín chỉ không tích lũy (Giáo dục thể chất, Giáo dục quốc phòng - an ninh).
-- **Định lượng 01 tín chỉ**:
-  - Tối thiểu **15 tiết học lý thuyết** (hoặc 30 tiết tự học);
-  - Hoặc bằng **30 tiết thực hành, thí nghiệm, thảo luận** và 15 tiết tự học có hướng dẫn;
-  - Hoặc bằng **45 tiết thực tập tại cơ sở**, làm tiểu luận, bài tập lớn, đồ án hoặc khóa luận tốt nghiệp.
-- **Mỗi học phần**: Thường có khối lượng từ **02 đến 04 tín chỉ**, được tổ chức giảng dạy trọn vẹn trong một học kỳ.
+- **Khối lượng toàn khóa**: Thời gian thiết kế của chương trình là từ **04 đến 06 năm**; thời gian tối đa để hoàn thành chương trình không quá **02 lần thời gian thiết kế**.
+- **Định lượng tín chỉ**: Phần lớn học phần có khối lượng từ **02 đến 04 tín chỉ**.
+
+### Bảng phân loại học phần:
+
+| Loại học phần              | Ý nghĩa                                                                                                             |
+| :------------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| **Bắt buộc**               | Sinh viên phải hoàn thành theo chương trình đào tạo.                                                                |
+| **Tự chọn**                | Sinh viên lựa chọn theo nhóm và khối lượng quy định của chương trình.                                               |
+| **Tiên quyết**             | Phải tích lũy học phần tiên quyết trước khi đăng ký học phần tiếp theo.                                             |
+| **Song hành**              | Phải học trước hoặc học cùng lúc với học phần liên quan.                                                            |
+| **Điều kiện**              | Giáo dục thể chất; Giáo dục quốc phòng - an ninh. Không tính vào điểm trung bình nhưng là điều kiện xét tốt nghiệp. |
+| **Tương đương / Thay thế** | Được Nhà trường công bố, cập nhật và dùng để công nhận hoặc thay thế học phần theo quy định.                        |
 
 ---
 
-## 3. Quy trình & Các bước Đăng ký Học phần trên MyTTU
+## 3. Quy tắc Đăng ký Học phần trên MyTTU
 
-### Nội dung đăng ký:
+1. **Kế hoạch học tập**: Sinh viên xây dựng kế hoạch học tập toàn khóa và được Cố vấn học tập (CVHT) phê duyệt; việc đăng ký học phần từng học kỳ căn cứ theo kế hoạch này.
+2. **Sinh viên mới trúng tuyển**: **Không phải đăng ký học phần ở học kỳ đầu tiên**; Nhà trường tự động bố trí các học phần của học kỳ này.
+3. **Nghĩa vụ tài chính**: Đăng ký chỉ được chấp nhận sau khi sinh viên **hoàn thành nghĩa vụ tài chính / học phí** theo quy định.
 
-- **Học phần bắt buộc**: Nhà trường tự động đăng ký sẵn theo tiến độ kế hoạch đào tạo của ngành (thời khóa biểu chính khóa).
-- **Học phần đăng ký bổ sung**: Sinh viên tự đăng ký học phần tự chọn, GDTC, ngoại ngữ thứ hai, học lại (học phần không đạt), học vượt, học bù, học cải thiện hoặc các học phần thuộc chương trình đào tạo thứ hai (song bằng/song ngành).
-
-### Hướng dẫn 5 bước đăng ký trên hệ thống MyTTU:
+### Hướng dẫn các bước đăng ký trên MyTTU:
 
 <RegistrationSteps />
 
 ---
 
-## 4. Mốc thời gian & Hạn đăng ký
+## 4. Khối lượng Tín chỉ Đăng ký & Mốc Thời gian
 
-- **Trước khi bắt đầu học kỳ**: Sinh viên chủ động liên hệ Giảng viên Cố vấn học tập (CVHT) để được tư vấn lộ trình và học phần dự kiến.
-- **Chậm nhất 15 ngày trước khi bắt đầu học kỳ**: Sinh viên phải hoàn thành toàn bộ việc đăng ký các học phần trên hệ thống MyTTU.
-- **Trong 01 tuần đầu tiên của học kỳ**: Sinh viên được phép đăng ký thêm học phần muốn học hoặc đăng ký hủy, đổi sang học phần khác. Việc đăng ký chỉ được duyệt khi sinh viên đã hoàn thành đầy đủ nghĩa vụ tài chính / học phí.
+### Định mức số tín chỉ đăng ký mỗi học kỳ:
 
-<Callout type="warn" title="Điều kiện tiên quyết tài chính">
-  Phòng Quản lý Đào tạo chỉ phê duyệt kết quả đăng ký học phần chính thức cho những sinh viên **đã
-  hoàn thành đầy đủ nghĩa vụ tài chính / học phí** với nhà trường theo đúng thời hạn thông báo.
-</Callout>
+| Đối tượng / Học kỳ                          | Số tín chỉ tối thiểu | Số tín chỉ tối đa |
+| :------------------------------------------ | :------------------: | :---------------: |
+| **Học kỳ chính – Học lực bình thường**      |    **10 tín chỉ**    |  **21 tín chỉ**   |
+| **Học kỳ chính – Đang bị cảnh báo học tập** |    **08 tín chỉ**    |  **15 tín chỉ**   |
+| **Học kỳ phụ (Hè)**                         |    Không quy định    |  **12 tín chỉ**   |
 
----
+### Mốc thời gian quan trọng:
 
-## 5. Học vượt & Chương trình Song bằng (02 CTĐT)
-
-### Học vượt tiến độ:
-
-- Tùy vào năng lực học tập thực tế, sinh viên được phép đăng ký học vượt so với tiến độ thiết kế chuẩn của khóa học.
-- Sinh viên cần cân đối thời khóa biểu cá nhân để đảm bảo đáp ứng đầy đủ các điều kiện tiên quyết quy định cho từng học phần.
-
-### Đào tạo cùng lúc 02 chương trình đào tạo (Song bằng / Song ngành):
-
-- Ngoài chương trình đào tạo ngành chính, sinh viên có thể đăng ký học thêm một ngành thứ hai theo hình thức song bằng hoặc song ngành.
-- Khi tốt nghiệp, sinh viên hoàn thành cả hai chương trình sẽ được cấp hai văn bằng cử nhân/kỹ sư hoặc giấy chứng nhận song ngành tương ứng.
+- **Hạn hoàn thành đăng ký học phần**: Chậm nhất **15 ngày** trước khi học kỳ bắt đầu.
+- **Điều chỉnh trong tuần đầu**: Trong **01 tuần đầu** của học kỳ, sinh viên được đăng ký thêm học phần muốn học hoặc đăng ký hủy, đổi sang học phần khác.
+- **Học vượt tiến độ**: Sinh viên có học lực tốt được phép đăng ký học vượt so với tiến độ thiết kế chuẩn của khóa học, nhưng phải bảo đảm đáp ứng đầy đủ các học phần tiên quyết.
 
 ---
 
-## 6. Đăng ký Học lại & Học cải thiện điểm
+## 5. Miễn học, Công nhận & Chuyển điểm Học phần
 
-### Đăng ký học lại (Retake)
+Căn cứ Điều 13 và Điều 14 Quy chế đào tạo:
 
-- Khi học phần bị điểm **F (dưới 4.0 thang 10 hoặc dưới D)**, sinh viên bắt buộc phải đăng ký học lại học phần đó ở các học kỳ tiếp theo.
-- Đối với học phần tự chọn không đạt, nếu trường không mở lại lớp, sinh viên có thể chọn học phần tự chọn khác tương đương thuộc cùng khối kiến thức để thay thế.
-- Sinh viên nộp học phí học lại theo quy định của nhà trường.
-
-### Đăng ký cải thiện điểm
-
-- Sinh viên được quyền đăng ký học lại để **cải thiện điểm** các học phần đã tích lũy điểm C, D.
-- **Điểm học phần được tính là điểm cao nhất** trong các lần học.
-- Học phần cải thiện điểm bị điểm F sẽ **không** tính vào tỷ lệ học lại để xét giảm bậc xếp loại tốt nghiệp.
-
----
-
-## 7. Học phần Bảo lưu & Học phần Tương đương
-
-Áp dụng cho sinh viên chuyển trường hoặc chuyển ngành học:
-
-- Các học phần có nội dung và khối lượng kiến thức tương đương đã tích lũy tại các trường đại học hợp pháp sẽ được Nhà trường xem xét công nhận và miễn trừ khối lượng tín chỉ tương ứng.
-- Điểm và số tín chỉ được chuyển đổi để cập nhật vào hồ sơ sinh viên trước khi bắt đầu học kỳ mới.
+- **Điều kiện xét công nhận**: Kết quả học tập từ chương trình khác có thể được xem xét nếu đạt từ **6,0/10 hoặc từ C trở lên**, có nội dung phù hợp và số tín chỉ bằng hoặc lớn hơn học phần của Trường.
+- **Thời hạn công nhận**:
+  - Không quá **07 năm** đối với kiến thức cơ sở ngành và chuyên ngành.
+  - Không quá **05 năm** đối với kiến thức giáo dục đại cương.
+- **Các môn xét theo điều kiện riêng**: Ngoại ngữ cơ bản, Tin học đại cương, Giáo dục quốc phòng và an ninh, Giáo dục thể chất và các học phần Lý luận chính trị.
+- **Thời điểm nộp hồ sơ**: Nộp ngay khi nhập học. Riêng học phần ngoại ngữ có thể nộp vào đầu mỗi học kỳ chính theo kế hoạch đào tạo.
+- **Quy đổi điểm**: Học phần được miễn ghi **điểm M**, được tính số tín chỉ tích lũy nhưng **không tính vào điểm trung bình tích lũy (GPA)**.
+- **Lệ phí xét**: **100.000 đồng / học phần**.
+- **Giới hạn tối đa**: Tổng số tín chỉ được miễn và công nhận **không vượt quá 50% khối lượng chương trình đào tạo**.
+- **Lưu ý**: Sinh viên chỉ điều chỉnh đăng ký học phần sau khi có kết quả phê duyệt chính thức từ Phòng Quản lý Đào tạo.
