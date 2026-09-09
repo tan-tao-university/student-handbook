@@ -55,7 +55,8 @@ Toàn bộ nội dung được số hóa trực tiếp từ tài liệu **Sổ t
 
 ### 1. 🎓 Học tập & Đào tạo (`/hoc-vu/`)
 
-- **Đăng ký môn học**: Khung giờ tiết học chuẩn (50 phút/tiết), các bước đăng ký trực tuyến trên [my.ttu.edu.vn](https://my.ttu.edu.vn), hạn chót trước 15 ngày, quy định học vượt và chương trình song bằng/song ngành.
+- **Chương trình đào tạo & Việc làm**: Khung chương trình đào tạo, thời gian, số tín chỉ, ngôn ngữ giảng dạy và cơ hội việc làm chi tiết của 7 Khoa chuyên môn tại TTU.
+- **Đăng ký môn học**: Khung giờ tiết học chuẩn (50 phút/tiết), các bước đăng ký trực tuyến trên [my.ttu.edu.vn](https://my.ttu.edu.vn), định mức tín chỉ (10–21 TC), hạn chót trước 15 ngày, quy định học vượt và chương trình song bằng/song ngành.
 - **Rút bớt học phần**: Hạn chót nghiêm ngặt trong **01 tuần đầu tiên** của học kỳ, quy định tài chính từ tuần thứ 2 không giải quyết rút môn/học phí.
 - **Đánh giá & Điểm số**: Thang điểm 10 quy đổi thang chữ và thang 4.0, điều kiện đạt môn (từ điểm D trở lên), cách tính GPA, xếp hạng tốt nghiệp và danh hiệu danh giá **Latin Honors** (Summa cum laude, Magna cum laude, Cum laude).
 - **Quy chế học tập & Liêm chính**: Quy định chuyên cần $\ge 80\%$, xử lý gian lận thi cử theo 4 mức độ, ngưỡng cảnh báo học vụ theo từng năm học và các điều kiện buộc thôi học.
