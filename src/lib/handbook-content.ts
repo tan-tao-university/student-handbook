@@ -21,16 +21,17 @@ export const BANK_TRANSFER_CONTENT_PATTERN = '[MSSV] [Họ tên] Hoc phi [Học 
 export const BANK_TRANSFER_CONTENT_EXAMPLE = '23010012 Nguyen Van A Hoc phi HK1 2023-2024';
 
 export const DIRECT_PAYMENT_DETAILS = {
-  location: 'Phòng Tài chính – Kế toán, Tòa nhà Điều hành, Trường Đại học Tân Tạo',
-  address: 'Đại lộ Đại học Tân Tạo, Tân Đức E.City, Huyện Đức Hòa, Tỉnh Long An',
-  officeHours: 'Thứ Hai đến Thứ Sáu, sáng 8h00–12h00 và chiều 13h00–17h00',
+  location: 'Phòng Tài chính – Kế toán, Tòa nhà Levy, tầng trệt, Trường Đại học Tân Tạo',
+  address:
+    'Đại lộ Đại học Tân Tạo, Tân Đức E.City, Huyện Đức Hòa, Tỉnh Long An (nay là Xã Đức Hòa, Tỉnh Tây Ninh)',
+  officeHours: 'Từ 08h00 – 17h00, từ Thứ Hai – Thứ Bảy hằng ngày',
 } as const;
 
 export const REGISTRATION_STEPS_ASSISTANT_TEXT = [
   {
     title: 'Đăng nhập Cổng Đào tạo MyTTU',
     description:
-      'Truy cập https://my.ttu.edu.vn bằng tài khoản email sinh viên TTU có đuôi @student.ttu.edu.vn.',
+      'Truy cập https://my.ttu.edu.vn bằng tài khoản email sinh viên TTU có đuôi @std.ttu.edu.vn.',
     note: 'Nếu quên mật khẩu hoặc lỗi đăng nhập, liên hệ Ban CNTT.',
   },
   {

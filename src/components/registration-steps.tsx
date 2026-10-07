@@ -37,7 +37,7 @@ const stepsData: StepItem[] = [
         </Link>{' '}
         bằng tài khoản email sinh viên TTU (
         <code className="text-xs px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 font-mono">
-          @student.ttu.edu.vn
+          @std.ttu.edu.vn
         </code>
         ) được cấp khi nhập học.
       </>

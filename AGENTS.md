@@ -54,7 +54,7 @@ Hệ thống tài liệu hướng dẫn và quy tắc dành cho các AI Coding A
   - `ren-luyen/`: Quy chế điểm rèn luyện (thang 100), tín chỉ kỹ năng mềm (30 giờ/tín chỉ; 4 TC khối ngành, 2 TC Y khoa).
   - `quy-che-cong-tac-sv/`: Quyền và nhiệm vụ sinh viên, khen thưởng & 4 mức kỷ luật.
   - `tai-nguyen/`: Cẩm nang Thư viện TTU (`lib.ttu.edu.vn`), email sinh viên & an toàn mạng.
-  - `tai-chinh/`: Quy định học phí, học bổng Tài năng & Vượt khó ITASS (50% - 100%) của Quỹ Đặng Văn Được.
+  - `tai-chinh/`: Quy định học phí, học bổng Tài năng & Vượt khó ITASS (50% - 100%) của Quỹ ITA Vì tương lai.
   - `lien-he/`: Hướng dẫn thủ tục hành chính, câu hỏi thường gặp (FAQ) và danh bạ liên hệ.
 
 ---
