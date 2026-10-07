@@ -94,7 +94,7 @@ Toàn bộ nội dung được số hóa trực tiếp từ tài liệu **Sổ t
 ### 7. 💵 Tài chính & Học bổng (`/tai-chinh/`)
 
 - **Học phí**: Chính sách cam kết học phí cố định, hướng dẫn kiểm tra học phí trên MyTTU, thông tin Kế toán trưởng và tài khoản thanh toán NCB.
-- **Học bổng Quỹ Đặng Văn Được**: Học bổng Tài năng và Vượt khó ITASS (mức 100%, 75%, 50%), Hỗ trợ vay đóng học phí không tính lãi suất, điều kiện duy trì học bổng từng kỳ ($\ge 80\%$ hoạt động truyền thông), nghĩa vụ phục vụ quê hương và quy trình xét cấp 9 bước.
+- **Học bổng Quỹ Đặng Văn Được**: Học bổng Tài năng và Vượt khó ITASS (mức 100%, 75%, 50%), Học bổng Tài năng toàn phần - Vì tương lai, hỗ trợ vay đóng học phí không tính lãi suất, điều kiện duy trì học bổng từng kỳ ($\ge 80\%$ hoạt động truyền thông), nghĩa vụ phục vụ quê hương và quy trình xét cấp.
 
 ### 8. 📞 Hỗ trợ & Danh bạ Liên hệ (`/lien-he/`)
 
